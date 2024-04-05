@@ -1,0 +1,312 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Excel Workshop 2024",
+    "section": "",
+    "text": "Preface\nThis book written in Quarto. The contents in the book are to make beginner level people understand excel software. For that we have oversimplified many functions and commands without going in depth so that people who are not familiar with excel doesn’t feel confused. There are many books and articles which explain the commands and functions in detail. You may refer them for getting an in depth understanding of the concepts and behind the scenes. This book is intended to use as an adjuant for the excel workshop conducted by us.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Getting Started",
+    "section": "",
+    "text": "1.1 Introduction",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#introduction",
+    "href": "intro.html#introduction",
+    "title": "1  Getting Started",
+    "section": "",
+    "text": "Excel is the most used spreadsheet software and a part of Microsoft Office suite.\nExcel skill is very much required for a public health professional for their day to day activities.\nSome uses\n\nCrunching numbers\nCreating charts\nOrganizing lists\nManipulating text\nAccess data from other sources",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#workbook-and-worksheets",
+    "href": "intro.html#workbook-and-worksheets",
+    "title": "1  Getting Started",
+    "section": "1.2 Workbook and Worksheets",
+    "text": "1.2 Workbook and Worksheets\n\nA workbook is a file that you create in Excel (default file extension is .xlsx)\nEach workbook contains one or more worksheets\nEach worksheet contains individual cells\nThere is an invisible layer on top of each worksheet which holds the charts, diagrams, pictures, etc\n\n\n\n\nUseful elements in the excel screen",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#data-types",
+    "href": "intro.html#data-types",
+    "title": "1  Getting Started",
+    "section": "1.3 Data Types",
+    "text": "1.3 Data Types\n\nThere are four basic types of data in Excel\n\nA numeric value\nText\nA formula\nAn error\n\nNumeric value can be numbers, dates, time, amount,…\nFormulas are what makes spreadsheet a spreadsheet, more on this later.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#number-formatting",
+    "href": "intro.html#number-formatting",
+    "title": "1  Getting Started",
+    "section": "1.4 Number Formatting",
+    "text": "1.4 Number Formatting\n\nFormatting numbers make data more understandable\nCommonly used number formats:\n\nGeneral\nNumber\nCurrency\nDate\nTime\nPercentage\n\nNumber formatting can be changed by clicking Number format dropdown.\n\n\n\nNumber of decimals can be increased or decreased from the command next to Number format dropdown.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#worksheet-operations",
+    "href": "intro.html#worksheet-operations",
+    "title": "1  Getting Started",
+    "section": "1.5 Worksheet Operations",
+    "text": "1.5 Worksheet Operations\n\nSheet tab in the bottom left corner lists all the worksheets(except hidden)\n\n\n\nIf there are many worksheets in the workbook, all the sheets may not be visible. Use the tab scrolling control to see the sheet tabs.\n\n\n\nRight click on the sheet tab to see the available operations.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#rows-and-columns",
+    "href": "intro.html#rows-and-columns",
+    "title": "1  Getting Started",
+    "section": "1.6 Rows and Columns",
+    "text": "1.6 Rows and Columns\n\nThere are exactly 1,048,576 rows and 16,384 columns in every worksheet.\nRow numbers are at the left side of the sheet.\nColumn numbers are at the top of the sheet.  \nTo insert new row or rows, select an entire row or multiple rows by clicking the row numbers in the worksheet border. Right-click and choose Insert.\nTo insert new column or columns, select an entire column or columns by clicking the column letters in the worksheet border. Right-click and choose Insert.\nExcel will insert exactly the number of rows or columns you selected.\nTo delete rows or columns, select the rows or columns to remove from the worksheet border, right-click and choose Delete.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#cells-and-ranges",
+    "href": "intro.html#cells-and-ranges",
+    "title": "1  Getting Started",
+    "section": "1.7 Cells and Ranges",
+    "text": "1.7 Cells and Ranges\n\nA cell is a single element in a worksheet that can hold a value, some text, or a formula.\nA cell is identified by its address, which consists of its column letter and row number.\nFor example, cell D9 is the cell in the 4th column and the 9th row.  \nA group of one or more cells is called a range.\nYou designate a range address by specifying its upper-left cell address and its lower-right cell address, separated by a colon.\nFor example, A1:A100 is the range which contains 1st to 100th row in the 1st column.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#copying-and-moving-cells-or-ranges",
+    "href": "intro.html#copying-and-moving-cells-or-ranges",
+    "title": "1  Getting Started",
+    "section": "1.8 Copying and Moving Cells or Ranges",
+    "text": "1.8 Copying and Moving Cells or Ranges\n\nCopying or moving consists of two steps:\n\nSelect the cell or range to copy (the source range), and copy it to the Clipboard. To move the range instead of copying it, cut the range instead of copying it.\nSelect the cell or range that will hold the copy (the destination range), and paste the Clipboard contents.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nWhen you paste the information, Excel overwrites any cells that is in the destination range without any warning.\n\n\n\n1.8.1 Pasting in special ways\n\nTo control what is pasted into the destination range, right-click and choose Paste Special. There are multiple options available\n\n\nSome useful paste options are as follows:\n\n\n\n\n\n\n\nSelect\nTo Paste\n\n\n\n\nPaste\nAll cell contents and formatting, including linked data\n\n\nFormulas\nOnly the formulas\n\n\nFormulas & Number Formatting\nPastes formulas and number formatting only\n\n\nKeep Source Formatting\nAll cell contents and formatting\n\n\nTranspose\nReorients the content of copied cells when pasting. Data in rows is pasted into columns and vice versa\n\n\nValues\nPastes the results of formulas\n\n\nValues & Number Formatting\nPastes the results of formulas plus the number formatting\n\n\nValues & Source Formatting\nPastes the results of formulas plus all formatting\n\n\nFormatting\nPastes only the formatting of the source range\n\n\nPaste Link\nCreates formulas in the destination range that refer to the cells in the copied range",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#named-ranges",
+    "href": "intro.html#named-ranges",
+    "title": "1  Getting Started",
+    "section": "1.9 Named Ranges",
+    "text": "1.9 Named Ranges\nNamed ranges in Excel are like shortcuts for your data. They allow you to assign a meaningful name to a specific cell or range of cells, making it easier to reference them throughout your workbook. This feature not only streamlines your formulas but also enhances the readability and organization of your spreadsheets. Let’s see how named ranges work and explore their practical applications through an example.\n\n1.9.1 Creating Named Ranges\nTo create a named range in Excel, follow these simple steps:\n\nSelect the Cells: Highlight the cell or range of cells you want to name.\nName the Range: Go to the “Formulas” tab on the ribbon, click on “Define Name,” and enter your desired name for the range.\nConfirm: Click “OK” to save the named range.\n\n\n\n\n\n\n\nTip\n\n\n\nThe fastest way to create a name is to use the Name box (to the left of the Formula bar). Select the cell or range to name, click the Name box, and type the name. Press Enter to create the name.\n\n\n\n\n1.9.2 Advantages of Named Ranges\n\nReadability: Instead of referring to cells by their coordinates (e.g., A1:B10), you can use descriptive names that convey the purpose of the data.\nEase of Use: A meaningful range name (such as Hb_level) is much easier to remember than a range address\nFlexibility: They make your spreadsheet more dynamic as named ranges automatically adjust when you insert or delete rows and columns.\n\n\n\n1.9.3 Example\nSuppose you have the following data:\n\nInstead of referencing cell ranges directly in your formulas, you can name the ranges for better clarity. Let’s name cell range A2:A7 as “names” and B2:B7 as “height”\n\nDefine Named Ranges:\n\nnames: =$A$2:$A$7\nheight: =$B$2:$B$7\n\n\nNow, to calculate the total sales, you can simply use the formula:\n=AVERAGE(height)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#sec-tables",
+    "href": "intro.html#sec-tables",
+    "title": "1  Getting Started",
+    "section": "1.10 Tables",
+    "text": "1.10 Tables\nTables in Excel are powerful tools for organizing and analyzing data efficiently. With their flexibility and functionality, tables can significantly enhance your data management capabilities. In this section, we’ll see how to add a table, sorting and filtering data within a table, and changing the appearance of tables in Excel.\n\n1.10.1 Adding a Table:\nAdding a table in Excel is a straightforward process:\n\nSelect Your Data: Highlight the range of cells containing your data. This can include headers if your data has them.\nInsert a Table: Navigate to the “Insert” tab on the Excel ribbon. Click on the “Table” button. Excel will automatically detect the range of cells you selected and prompt you to confirm it. Ensure the “My table has headers” option is checked if your data includes headers.\nCustomize Your Table: After inserting the table, you can modify its design and structure using the “Table Design” tab that appears when the table is selected. Here you can change the table style, add or remove columns, and make other adjustments to suit your preferences.\n\n\n\n\n\n\n\nTip\n\n\n\nYou can use the keyboard shortcut Ctrl + T to insert a table from the selected range of cells.\n\n\n\n\n1.10.2 Sorting and Filtering Data:\nOnce you’ve created a table, sorting and filtering data becomes incredibly efficient:\n\nSorting Data: To sort data within a table, simply click on the dropdown arrow in the header of the column you want to sort by. Choose either “Sort A to Z” or “Sort Z to A” based on your preference. Excel will instantly rearrange the rows according to your selection.\nExample: Suppose you have a table of data about basic details of people with columns for “Name”, “Age”, and “Sex”. You can sort the table by “Age” in descending order to see the oldest people at the top.\nFiltering Data: Filtering allows you to display only specific rows of data based on criteria you define. Click on the dropdown arrow in the header of the column you want to filter. You can then select specific values to display or use custom filter options for more complex filtering conditions.\nExample: In a table containing patients information, you can filter the “Department” column to show only patient from the “Cardiology” department.\n\n\n\n1.10.3 Naming a Table\nAssigning names to tables in Excel is a straightforward process, yet its implications are profound.\n\nSelect the Table: Begin by selecting the range of cells that constitute your table.\nNavigate to the ‘Table Design’ Tab: Once your table is selected, navigate to the ‘Table Design’ tab on the Excel ribbon. Here, you’ll find a Table Name option.\nEnter a Name: Below the Table Name option, there is a textbox where you can enter the name for the table. Give the table a name and press “Enter”.\n\n\n\n1.10.4 Changing Appearance:\nThe “Table Design” tab offers a range of predefined table styles that you can apply with a single click. These styles include different colors, fonts, and formatting options. If you are not happy with any of the built-in Excel table styles, you can create your own table style from New Table Style option underneath the predefined styles.\nExperiment with the features to discover the full potential of tables in Excel for your specific needs.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#formatting-worksheets",
+    "href": "intro.html#formatting-worksheets",
+    "title": "1  Getting Started",
+    "section": "1.11 Formatting Worksheets",
+    "text": "1.11 Formatting Worksheets\nFormatting a worksheet in Excel is essential for enhancing readability, organizing data, and making it visually appealing. Whether you’re working on a budget, report, or any other document, mastering formatting options can significantly improve the presentation of your data. In this section, we’ll explore various formatting tools including font, text alignment, color and shading, borders and lines.\n\n1.11.1 Font\nFont formatting allows you to change the appearance of text within cells. Excel offers a variety of font styles, sizes, and effects to customize text according to your preference.\n\nSelect the range of cells you want to format.\nGo to the ‘Home’ tab in the Excel ribbon.\nIn the ‘Font’ group, you can choose different font styles, sizes, bold, italic, underline, or other effects.\n\n\n\n1.11.2 Text Alignment:\nText alignment determines how the content within a cell is positioned. Excel provides options for aligning text horizontally and vertically within cells.\n\nSelect the cells you want to align.\nNavigate to the ‘Alignment’ group under the ‘Home’ tab.\nClick on the alignment icons to align text left, center, or right horizontally, and top, middle, or bottom vertically.\n\n\n\n1.11.3 Colour and Shading:\nColour and shading help to differentiate data, highlight important information, and improve visual clarity. Excel allows you to change the background colour of cells, apply shading effects, and colorize text.\n\nSelect the cell or range of cells you want to format.\nLocate the ‘Font’ and ‘Fill’ options in the ‘Home’ tab.\nChoose a font color to change the text color.\nUse the ‘Fill Color’ tool to change the background color of cells.\n\n\n\n1.11.4 Borders and Lines:\nBorders and lines enable you to create clear boundaries around cells or ranges, making your data more organized and structured.\n\nSelect the cells you want to apply borders to.\nNavigate to the ‘Font’ group under the ‘Home’ tab.\nClick on the ‘Borders’ dropdown menu to choose from various border styles such as outline borders, inside borders, or diagonal borders.\nSelect the desired border style to apply it to the selected cells.\n\nExperiment with these formatting features to create professional-looking documents tailored to your specific needs.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#conditional-formatting",
+    "href": "intro.html#conditional-formatting",
+    "title": "1  Getting Started",
+    "section": "1.12 Conditional Formatting",
+    "text": "1.12 Conditional Formatting\nConditional formatting in Excel is a powerful tool that allows you to visually highlight and format cells based on specific conditions. Whether you’re a data analyst, program manager, or a student, understanding how to utilize conditional formatting can significantly enhance the readability and analysis of your Excel spreadsheets. In this section, we’ll see the various aspects of conditional formatting including graphical conditional formats and creating formula-based rules.\n\n1.12.1 Specifying Conditional Formatting:\nTo specify conditional formatting in Excel, follow these simple steps:\n\nSelect the Range: Begin by selecting the range of cells you want to apply conditional formatting to.\nAccess the Conditional Formatting Menu: Navigate to the “Home” tab on the Excel ribbon, then click on the “Conditional Formatting” dropdown menu located in the “Styles” group.\nChoose a Formatting Rule: From the dropdown menu, select the type of conditional formatting rule you want to apply. Excel offers a variety of predefined rules such as highlighting cells that contain specific text, dates, or values, as well as rules based on comparison operators.\nSpecify Conditions: Define the conditions under which the formatting should be applied. This could involve setting threshold values, text criteria, date ranges, or custom formulas.\nSet Formatting Options: After selecting the rule type, configure the formatting options according to your preferences. This may include choosing font color, cell fill color, font style, borders, and more.\nApply and Review: Once you’ve set up the formatting rule, click “OK” to apply it to the selected range. Review the changes to ensure they meet your expectations.\n\n\n\n1.12.2 Using Graphical Conditional Formats:\nExcel provides several graphical conditional formats that offer visually appealing ways to represent your data. Some popular graphical formats include:\n\nData Bars: Data bars add horizontal bars to cells proportional to their values. This makes it easy to visually compare values across a range of cells.\nColor Scales: Color scales apply a gradient of colors to cells based on their values. For example, you can use a green-yellow-red color scale to highlight high, medium, and low values in your dataset.\nIcon Sets: Icon sets display icons (such as arrows, shapes, or symbols) in cells based on predefined criteria. For instance, you can use arrow icons to indicate whether values are increasing, decreasing, or staying the same.\n\n\n\n1.12.3 Formula-Based Rules:\nFormula-based conditional formatting allows you to create custom rules using Excel formulas. This provides flexibility in defining conditions for formatting. Here’s an example of how to create a formula-based rule:\nExample: Highlighting Cells with Values Greater Than Average\n\nSelect the Range: Choose the range of cells you want to format.\nAccess Conditional Formatting: Go to the “Conditional Formatting” menu and select “New Rule.”\nChoose a Rule Type: Select “Use a formula to determine which cells to format.”\nEnter the Formula: In the formula box, enter a formula that defines the condition. For this example, the formula could be =A1&gt;AVERAGE(A:A) assuming the data is in column A.\nSet Formatting: Specify the formatting options you want to apply to cells that meet the condition.\nApply and Review: Click “OK” to apply the rule and review the changes in your spreadsheet.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#relative-and-absolute-cell-referencing",
+    "href": "intro.html#relative-and-absolute-cell-referencing",
+    "title": "1  Getting Started",
+    "section": "1.13 Relative and Absolute Cell Referencing",
+    "text": "1.13 Relative and Absolute Cell Referencing\nThere are two types of cell references: relative and absolute. Relative and absolute references behave differently when copied and filled to other cells. Relative references change when a formula is copied to another cell. Absolute references, on the other hand, remain constant no matter where they are copied.\nRelative: The row and column references can change when you copy the formula to another cell because the references are actually offsets from the current row and column. By default, Excel creates relative cell references in formulas.\nAbsolute: The row and column references don’t change when you copy the formula because the reference is to an actual cell address. An absolute reference uses two dollar signs in its address: one for the column letter and one for the row number (for example, $A$5).\nMixed: Either the row or the column reference is relative, and the other is absolute. Only one of the address parts is absolute (for example, $A4 or A$4).\nThe type of cell reference is important only if you plan to copy the formula to other cells.\n\n1.13.1 Example\n\nRelative Cell Referencing: In the given example, if we’re calculating the Total for each project, the formula for Project A’s Total might be =SUM(B2:E2). When this formula is copied to the row below for Project B, Excel automatically adjusts the formula to =SUM(B3:E3). This adjustment is because Excel sees that the formula has been moved down by one row, so it updates the row references accordingly. This behavior is known as relative cell referencing.\nAbsolute Cell Referencing: Now, let’s say we want to calculate the percentage of each project’s total compared to the grand total. To do this, we might use a formula like =F2/$F$5 for Project A’s percentage. The $ signs before the row and column in $F$5 make the reference absolute. When you copy this formula to other rows, the reference to cell F5 will remain unchanged. This is useful when you want a specific cell reference to stay constant, such as when referencing a grand total or a fixed value.\nIn summary, relative cell referencing adjusts the reference based on the position of the formula when copied, while absolute cell referencing keeps the reference constant regardless of where the formula is copied.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#creating-opening-and-saving-workbooks",
+    "href": "intro.html#creating-opening-and-saving-workbooks",
+    "title": "1  Getting Started",
+    "section": "1.14 Creating, Opening, and Saving Workbooks",
+    "text": "1.14 Creating, Opening, and Saving Workbooks\nIn Excel, workbooks are the foundation of organizing and manipulating data. Whether you’re starting from scratch, accessing an existing file, or preserving your work, understanding how to create, open, and save workbooks is fundamental.\n\n1.14.1 Creating a New Workbook:\n\nLaunch Excel: Start by opening Microsoft Excel on your computer. You can usually find it in your applications folder or by searching your computer’s programs.\nSelect ‘Blank Workbook’: Upon launching Excel, you’re typically greeted with a new blank workbook automatically. If not, you can create a new one by clicking on “Blank Workbook” from the available templates or options.\nBegin Your Work: Once the new workbook is created, you’re ready to start entering data, formulas, or any other content you need. Each workbook consists of individual worksheets (tabs at the bottom), where you can organize your data efficiently.\n\n\n\n\n\n\n\nTip\n\n\n\nYou can use the keyboard shortcut Ctrl + N to create a new workbook\n\n\n\n\n1.14.2 Opening an Existing Workbook:\n\nNavigate to File: To open an existing workbook, click on the “File” tab located in the top-left corner of the Excel window. This will bring up the File menu.\nSelect ‘Open’: From the File menu, select the “Open” option. Alternatively, you may see a list of recent workbooks that you can directly access without going through the ‘Open’ dialog.\nLocate the Workbook: A dialog box will appear, allowing you to browse through your computer’s files. Navigate to the location where your desired workbook is stored.\nChoose the Workbook: Once you’ve found the workbook you wish to open, select it by clicking on its file name, then click ‘Open.’ Excel will load the workbook, displaying its contents in the Excel window.\n\n\n\n\n\n\n\nTip\n\n\n\nYou can use the keyboard shortcut Ctrl + O to open an existing workbook\n\n\n\n\n1.14.3 Saving a Workbook:\n\nClick on File: When you’re ready to save your workbook, navigate to the “File” tab again.\nSelect ‘Save’: If you’re saving the workbook for the first time, choose ‘Save As.’ If you’ve already saved it before and want to update the existing version, choose ‘Save.’\nChoose Location and Name: In the Save As dialog box, choose where you want to save the workbook on your computer. Additionally, give your workbook a descriptive name so you can easily identify it later.\nClick ‘Save’: Once you’ve selected the location, name, and file format, click ‘Save’ to save your workbook. If you chose ‘Save’ earlier, it will overwrite the existing file with the updates you’ve made.\n\n\n\n\n\n\n\nTip\n\n\n\nYou can use the keyboard shortcut Ctrl + S to save a workbook",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#printing-your-excel-file",
+    "href": "intro.html#printing-your-excel-file",
+    "title": "1  Getting Started",
+    "section": "1.15 Printing Your Excel File",
+    "text": "1.15 Printing Your Excel File\nYou may sometimes need to print the excel file for sharing, presenting, or archiving your data. Excel has a variety of printing options to ensure your document look professional and meet your specific needs. Here, we touch upon the basic printing options. There are many other options or formatting setups which you can read on your own.\n\nReview Your Spreadsheet: Before printing, ensure your spreadsheet is formatted correctly. Check for any errors, inconsistencies, or formatting issues that may affect the printout.\nSet Print Area (Optional): If you only want to print a specific area of your spreadsheet, select the cells you want to print, then navigate to the Page Layout tab on the Excel ribbon. Click on “Print Area” and select “Set Print Area” to define the range.\nAdjust Page Layout: Navigate to the Page Layout tab and click on “Page Setup.” Here you can adjust settings such as orientation (portrait or landscape), paper size, margins, and scaling to fit your spreadsheet appropriately on the page.\nPreview Print: Use the Print Preview function (located in the File tab under Print) to review how your spreadsheet will appear on paper. This allows you to make any final adjustments before printing.\nPrint Your Spreadsheet: Once satisfied with the preview, select the printer you wish to use and click “Print.” Excel will then send your spreadsheet to the printer, producing a hard copy according to your specified settings.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#converting-to-pdf-format",
+    "href": "intro.html#converting-to-pdf-format",
+    "title": "1  Getting Started",
+    "section": "1.16 Converting to PDF Format",
+    "text": "1.16 Converting to PDF Format\nExcel provides a straightforward method to convert your spreadsheet into a PDF file. Simply go to the File tab, select “Save As,” and choose “PDF” from the list of available file formats. Name your file and select the destination folder, then click “Save” to generate the PDF.  Converting to PDF ensures that your spreadsheet maintains its formatting, layout, and data integrity across different devices and platforms. This is particularly useful for sharing documents with others who may not have Excel installed or to preserve the original formatting for archival purposes.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#useful-keyboard-shortcuts",
+    "href": "intro.html#useful-keyboard-shortcuts",
+    "title": "1  Getting Started",
+    "section": "1.17 Useful Keyboard Shortcuts",
+    "text": "1.17 Useful Keyboard Shortcuts\n\n\n\nShortcut\nDescription\n\n\n\n\nCtrl + C\nCopy\n\n\nCtrl + X\nCut\n\n\nCtrl + V\nPaste\n\n\nCtrl + Z\nUndo\n\n\nCtrl + Y\nRedo\n\n\nCtrl + S\nSave\n\n\nCtrl + N\nNew workbook\n\n\nCtrl + O\nOpen workbook\n\n\nCtrl + P\nPrint\n\n\nCtrl + F\nFind\n\n\nCtrl + H\nReplace\n\n\nCtrl + A\nSelect all\n\n\nCtrl + B\nBold\n\n\nCtrl + I\nItalic\n\n\nCtrl + U\nUnderline\n\n\nCtrl + Spacebar\nSelect entire column\n\n\nShift + Spacebar\nSelect entire row\n\n\nF7\nSpell check\n\n\nAlt + =\nAutoSum\n\n\nAlt + Enter\nStart a new line in the same cell\n\n\nAlt + F4\nClose Excel\n\n\nCtrl + Tab\nSwitch between open workbooks\n\n\nCtrl + Page Up\nMove to the previous worksheet\n\n\nCtrl + Page Down\nMove to the next worksheet",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
+    ]
+  },
+  {
+    "objectID": "formula.html",
+    "href": "formula.html",
+    "title": "2  Formulas and Functions",
+    "section": "",
+    "text": "2.1 Formula Basics\nFormulas in Excel are expressions that perform calculations or operations on values in a worksheet. They can range from simple arithmetic calculations to sophisticated logical operations and statistical analyses. Excel formulas start with an equal sign (=) followed by any of these elements:\nAfter you enter the formula, excel displays the calculated result in the cell(s).\nFew examples of formulas:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Formulas and Functions</span>"
+    ]
+  },
+  {
+    "objectID": "formula.html#formula-basics",
+    "href": "formula.html#formula-basics",
+    "title": "2  Formulas and Functions",
+    "section": "",
+    "text": "Mathematical operators such as + (for addition), * (for multiplication)\nCell references (including named cells and ranges)\nValues or text\nWorksheet functions (such as SUM and AVERAGE)\n\n\n\n\n\n\nExample\nFormula\n\n\n\n\nSimple Addition\n=A1 + B1\n\n\nMultiplication\n=A1 * B1\n\n\nSUM Function\n=SUM(A1:A10)\n\n\nAVERAGE Function\n=AVERAGE(A1:A10)\n\n\nIF Function\n=IF(A1&gt;10, \"Pass\", \"Fail\")\n\n\nConditional Calculation\n=IF(A1&gt;100, A1*10, A1*5)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Formulas and Functions</span>"
+    ]
+  },
+  {
+    "objectID": "formula.html#operators-used-in-formulas",
+    "href": "formula.html#operators-used-in-formulas",
+    "title": "2  Formulas and Functions",
+    "section": "2.2 Operators used in formulas",
+    "text": "2.2 Operators used in formulas\nOperators are symbols that indicate what mathematical (or logical) operation you want the formula to perform.\n\n\n\nOperator\nName\n\n\n\n\n+\nAddition\n\n\n-\nSubtraction\n\n\n*\nMultiplication\n\n\n/\nDivision\n\n\n^\nExponentiation\n\n\n&\nConcatenation\n\n\n=\nLogical comparison (equal to)\n\n\n&gt;\nLogical comparison (greater than)\n\n\n&lt;\nLogical comparison (less than)\n\n\n&gt;=\nLogical comparison (greater than or equal to)\n\n\n&lt;=\nLogical comparison (less than or equal to)\n\n\n&lt;&gt;\nLogical comparison (not equal to)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Formulas and Functions</span>"
+    ]
+  },
+  {
+    "objectID": "formula.html#function-basics",
+    "href": "formula.html#function-basics",
+    "title": "2  Formulas and Functions",
+    "section": "2.3 Function Basics",
+    "text": "2.3 Function Basics\nA function is a predefined formula that performs calculations or task using specific values in a particular order. These functions are designed to simplify complex calculations and streamline repetitive tasks, saving you time and effort.\n\n2.3.1 Syntax\nEvery Excel function follows a standardized syntax, consisting of the function name, followed by parentheses enclosing one or more arguments. Arguments are the inputs provided to the function, which determine its behavior and output. Understanding the syntax of a function is crucial for using it correctly. Let’s break it down:\n=FUNCTION_NAME(argument1, argument2, ...)\n\nFunction Name: This is the name of the function that defines its purpose. Examples include SUM, AVERAGE, IF, VLOOKUP, etc.\nArguments: These are the values or cell references provided to the function to perform the desired calculation. The number and type of arguments vary depending on the function.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Formulas and Functions</span>"
+    ]
+  },
+  {
+    "objectID": "formula.html#referencing-cells-in-other-worksheets",
+    "href": "formula.html#referencing-cells-in-other-worksheets",
+    "title": "2  Formulas and Functions",
+    "section": "2.4 Referencing Cells in Other Worksheets",
+    "text": "2.4 Referencing Cells in Other Worksheets\nTo use a reference to a cell in another worksheet in the same workbook, use this format:\n=SheetName!CellAddress\nIn other words, precede the cell address with the worksheet name followed by an exclamation point. Here’s an example of a formula that uses a cell on the Sheet2 worksheet:\n=A1*Sheet2!A1\nThis formula multiplies the value in cell A1 on the current worksheet by the value in cell A1 on Sheet2.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Formulas and Functions</span>"
+    ]
+  },
+  {
+    "objectID": "formula.html#referencing-data-in-a-table",
+    "href": "formula.html#referencing-data-in-a-table",
+    "title": "2  Formulas and Functions",
+    "section": "2.5 Referencing Data in a Table",
+    "text": "2.5 Referencing Data in a Table\nWe have discussed about Excel Tables in Section 1.10.\nTables in Excel come with predefined headers for each column. These headers provide an intuitive way to reference data within the table. You can use these headers in formulas and functions to retrieve specific information.\nFor instance, you have a table named “PatientData” with columns: “Name”, “Age”, “Sex”, “Days of Hospitalization”. To find the average days of hospitalization, you can use the formula:\n=AVERAGE(PatientData[Days of Hospitalization])\nHere PatientData[Days of Hospitalization] refers to “Days of Hospitalization” column in the table “PatientData”.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Formulas and Functions</span>"
+    ]
+  },
+  {
+    "objectID": "formula.html#common-formula-errors",
+    "href": "formula.html#common-formula-errors",
+    "title": "2  Formulas and Functions",
+    "section": "2.6 Common Formula Errors",
+    "text": "2.6 Common Formula Errors\nSometimes when you enter a formula, Excel displays a value that begins with a hash mark (#). This is a signal that the formula is returning an error value. You have to correct the formula (or correct a cell that the formula references) to get rid of the error display.\n\n\n\n\n\n\n\nError Value\nExplanation\n\n\n\n\n#DIV/0!\nThe formula is trying to divide by zero. Because Excel applies a value of 0 to empty cells, this error also occurs when the formula attempts to divide by a cell that is blank or has a value of 0.\n\n\n#NAME?\nThe formula uses a name that Excel doesn’t recognize. This can happen if you delete a name that’s used in the formula, if you misspell a name and then hit Enter, or if you have unmatched quotes when using text.\n\n\n#N/A\nThe formula is referring (directly or indirectly) to a cell that uses the NA function to signal that data is not available. For instance, the following formula returns an #N/A error if the A1 is empty: =IF(A1=““, NA(), A1) Some lookup functions (for example, VLOOKUP and MATCH) can also return #N/A when they do not find a match.\n\n\n#NULL!\nThe formula uses an intersection of two ranges that don’t intersect. (This concept is described later in the chapter.)\n\n\n#NUM!\nA problem with a value exists; for example, you specified a negative number as an argument where a positive number is required.\n\n\n#REF!\nThe formula refers to a cell that isn’t valid. This can happen if the cell has been deleted from the worksheet.\n\n\n#VALUE!\nThe formula includes an argument or operand of the wrong type. (An operand is a value or cell reference that a formula uses to calculate a result.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Formulas and Functions</span>"
+    ]
+  },
+  {
+    "objectID": "formula.html#formula-for-common-mathematical-operations",
+    "href": "formula.html#formula-for-common-mathematical-operations",
+    "title": "2  Formulas and Functions",
+    "section": "2.7 Formula for Common Mathematical Operations",
+    "text": "2.7 Formula for Common Mathematical Operations\nLike everyone who has to use Excel, public health students and professionals also will be asked to perform mathematical operations that provide insight into the data. We will see some examples of formulas that will help with this type of analyses.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Formulas and Functions</span>"
+    ]
+  },
+  {
+    "objectID": "formula.html#calculating-percentages",
+    "href": "formula.html#calculating-percentages",
+    "title": "2  Formulas and Functions",
+    "section": "2.8 Calculating Percentages",
+    "text": "2.8 Calculating Percentages\nUnderstanding the proportion of individual values in relation to the total is crucial for insightful analysis. Excel simplifies this task with the following formula:\n= (Value / Total) * 100\nHere, “Value” represents the specific data point you’re interested in, and “Total” denotes the sum of all relevant values. By multiplying the quotient with 100, you obtain the percentage representation.\nFor example, suppose you have a dataset containing the number of cases of a disease for different states in a country and you want to calculate the percentage of the cases in each state out of the total cases in the country. You can use the formula =(Cases in State / Total Cases in Country) * 100 to find the percentage for each region.\nDragging this formula across the dataset will swiftly compute the percentage of cases in each state. \nAnalyzing variations between two data points is essential for detecting trends or anomalies. The formula for calculating percentage variance is:\n= ((New Value - Old Value) / Old Value) * 100\nIn this formula, “New Value” signifies the updated or later data point, while “Old Value” represents the initial or previous data point. The difference between the new and old values, divided by the old value and multiplied by 100, yields the percentage variance.\nConsider a scenario where you have data on the number of cases of a disease for two consecutive years. To calculate the percentage increase in cases from one year to the next, you can use the formula =((Cases in Year 2 - Cases in Year 1) / Cases in Year 1) * 100.\nExecuting this formula provides a clear percentage representation of the case variation, indicating whether cases have increased or decreased and by what percentage.\nExercise file is available here",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Formulas and Functions</span>"
+    ]
+  },
+  {
+    "objectID": "formula.html#counting-values-in-a-range",
+    "href": "formula.html#counting-values-in-a-range",
+    "title": "2  Formulas and Functions",
+    "section": "2.9 Counting Values in a Range",
+    "text": "2.9 Counting Values in a Range\nExcel provides several functions to count the values in a range. They allow ypu to quickly tally up occurrences, quantify datasets, and derive valuable insights.\n\n2.9.1 COUNT() Function\nThe COUNT() function is a fundamental tool for counting numeric values within a dataset. It disregards empty cells and cells containing text or errors.\nSyntax: =COUNT(value1, [value2], ...)\nExample:\nConsider a dataset containing the number of confirmed COVID-19 cases per day in a specific area:\n\n\n\nDay\nConfirmed Cases\n\n\n\n\nDay 1\n350\n\n\nDay 2\n520\n\n\nDay 3\n\n\n\nDay 4\n430\n\n\nDay 5\nError\n\n\nDay 6\n650\n\n\n\nTo count the the total number of days with reported cases:\n=COUNT(A2:A7)\nThis formula will return 4, as there are four numeric values in the specified range.\n\n\n2.9.2 COUNTA() Function\nWhile COUNT() tallies only numeric values, COUNTA() extends its capability to count all non-blank cells, including text and errors.\nSyntax: =COUNTA(value1, [value2], ...)\nExample:\nUsing the same dataset, let’s count all non-blank cells:\n=COUNTA(A2:A7)\nThis formula will return 5, including both numeric values and the error.\n\n\n2.9.3 COUNTIF() Function\nThe COUNTIF() function is invaluable for counting cells that meet specific criteria within a dataset.\nSyntax: =COUNTIF(range, criteria)\nExample:\nSuppose we want to count the number of days confirmed cases exceeding 400:\n=COUNTIF(A2:A7, \"&gt;400\")\nThis formula will return 3, indicating there are three days in which number of daily confirmed cases were greater than 400.\n\n\n2.9.4 COUNTIFS() Function\nSimilar to COUNTIF(), COUNTIFS() extends its functionality to count cells based on multiple criteria.\nSyntax: =COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2], ...)\nExample:\nConsider a scenario where we want to count the days with more than 100 cases in a specific region. We can use COUNTIFS() to achieve this by specifying both the region and the case count threshold.\n=COUNTIFS(A2:A7, \"&gt;400\", B2:B7, \"Region A\")\n\nExcel enables you to enter flexible formulas that use the values (or even text) in cells to calculate a result. When you enter a formula into a cell, the formula’s result appears in the cell. If you change any of the cells used by a formula, the formula recalculates and shows the new result.(Allen and Feigl 2017)\n\n\nabs round count sum sumif vlookup xlookup index match if ifs textjoin concatenate sentence case trim left right mid len today now =“Today is”&TEXT(TODAY(),“mmmm d, yyyy”) datedif extract year monmth day\n\n\n\n\n\nAllen, Luke N, and Andrea B Feigl. 2017. “What’s in a Name? A Call to Reframe Non-Communicable Diseases.” The Lancet Global Health 5 (2): e129–30. https://doi.org/10.1016/S2214-109X(17)30001-3.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Formulas and Functions</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "6  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Allen, Luke N, and Andrea B Feigl. 2017. “What’s in a Name? A Call\nto Reframe Non-Communicable Diseases.” The Lancet Global\nHealth 5 (2): e129–30. https://doi.org/10.1016/S2214-109X(17)30001-3.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
