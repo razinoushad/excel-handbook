@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.551">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Excel Workshop 2024 - 2&nbsp; Formulas and Functions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./visualizations.html" rel="next">
+<link href="./intro.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./formula.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Formulas and Functions</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Excel Workshop 2024</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting Started</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./formula.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Formulas and Functions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./visualizations.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creating Visuals</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data Cleaning and Analysis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./power_query.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Importing Data from Other Sources</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#formula-basics" id="toc-formula-basics" class="nav-link active" data-scroll-target="#formula-basics"><span class="header-section-number">2.1</span> Formula Basics</a></li>
+  <li><a href="#operators-used-in-formulas" id="toc-operators-used-in-formulas" class="nav-link" data-scroll-target="#operators-used-in-formulas"><span class="header-section-number">2.2</span> Operators used in formulas</a></li>
+  <li><a href="#function-basics" id="toc-function-basics" class="nav-link" data-scroll-target="#function-basics"><span class="header-section-number">2.3</span> Function Basics</a>
+  <ul class="collapse">
+  <li><a href="#syntax" id="toc-syntax" class="nav-link" data-scroll-target="#syntax"><span class="header-section-number">2.3.1</span> Syntax</a></li>
+  </ul></li>
+  <li><a href="#referencing-cells-in-other-worksheets" id="toc-referencing-cells-in-other-worksheets" class="nav-link" data-scroll-target="#referencing-cells-in-other-worksheets"><span class="header-section-number">2.4</span> Referencing Cells in Other Worksheets</a></li>
+  <li><a href="#referencing-data-in-a-table" id="toc-referencing-data-in-a-table" class="nav-link" data-scroll-target="#referencing-data-in-a-table"><span class="header-section-number">2.5</span> Referencing Data in a Table</a></li>
+  <li><a href="#common-formula-errors" id="toc-common-formula-errors" class="nav-link" data-scroll-target="#common-formula-errors"><span class="header-section-number">2.6</span> Common Formula Errors</a></li>
+  <li><a href="#formula-for-common-mathematical-operations" id="toc-formula-for-common-mathematical-operations" class="nav-link" data-scroll-target="#formula-for-common-mathematical-operations"><span class="header-section-number">2.7</span> Formula for Common Mathematical Operations</a></li>
+  <li><a href="#calculating-percentages" id="toc-calculating-percentages" class="nav-link" data-scroll-target="#calculating-percentages"><span class="header-section-number">2.8</span> Calculating Percentages</a></li>
+  <li><a href="#counting-values-in-a-range" id="toc-counting-values-in-a-range" class="nav-link" data-scroll-target="#counting-values-in-a-range"><span class="header-section-number">2.9</span> Counting Values in a Range</a>
+  <ul class="collapse">
+  <li><a href="#count-function" id="toc-count-function" class="nav-link" data-scroll-target="#count-function"><span class="header-section-number">2.9.1</span> COUNT() Function</a></li>
+  <li><a href="#counta-function" id="toc-counta-function" class="nav-link" data-scroll-target="#counta-function"><span class="header-section-number">2.9.2</span> COUNTA() Function</a></li>
+  <li><a href="#countif-function" id="toc-countif-function" class="nav-link" data-scroll-target="#countif-function"><span class="header-section-number">2.9.3</span> COUNTIF() Function</a></li>
+  <li><a href="#countifs-function" id="toc-countifs-function" class="nav-link" data-scroll-target="#countifs-function"><span class="header-section-number">2.9.4</span> COUNTIFS() Function</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Formulas and Functions</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>As said earlier, formulas are what makes spreadsheet a spreadsheet. You use formulas in your Excel worksheets to calculate results from the data stored in the worksheet. When data changes, the formulas calculate updated results with no extra effort on your part.</p>
+<section id="formula-basics" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="formula-basics"><span class="header-section-number">2.1</span> Formula Basics</h2>
+<p>Formulas in Excel are expressions that perform calculations or operations on values in a worksheet. They can range from simple arithmetic calculations to sophisticated logical operations and statistical analyses. Excel formulas start with an equal sign (=) followed by any of these elements:</p>
+<ul>
+<li>Mathematical operators such as + (for addition), * (for multiplication)</li>
+<li>Cell references (including named cells and ranges)</li>
+<li>Values or text</li>
+<li>Worksheet functions (such as <code>SUM</code> and <code>AVERAGE</code>)</li>
+</ul>
+<p>After you enter the formula, excel displays the calculated result in the cell(s).</p>
+<p>Few examples of formulas:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Example</th>
+<th>Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Simple Addition</td>
+<td><code>=A1 + B1</code></td>
+</tr>
+<tr class="even">
+<td>Multiplication</td>
+<td><code>=A1 * B1</code></td>
+</tr>
+<tr class="odd">
+<td>SUM Function</td>
+<td><code>=SUM(A1:A10)</code></td>
+</tr>
+<tr class="even">
+<td>AVERAGE Function</td>
+<td><code>=AVERAGE(A1:A10)</code></td>
+</tr>
+<tr class="odd">
+<td>IF Function</td>
+<td><code>=IF(A1&gt;10, "Pass", "Fail")</code></td>
+</tr>
+<tr class="even">
+<td>Conditional Calculation</td>
+<td><code>=IF(A1&gt;100, A1*10, A1*5)</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="operators-used-in-formulas" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="operators-used-in-formulas"><span class="header-section-number">2.2</span> Operators used in formulas</h2>
+<p>Operators are symbols that indicate what mathematical (or logical) operation you want the formula to perform.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+</td>
+<td>Addition</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td>Subtraction</td>
+</tr>
+<tr class="odd">
+<td>*</td>
+<td>Multiplication</td>
+</tr>
+<tr class="even">
+<td>/</td>
+<td>Division</td>
+</tr>
+<tr class="odd">
+<td>^</td>
+<td>Exponentiation</td>
+</tr>
+<tr class="even">
+<td>&amp;</td>
+<td>Concatenation</td>
+</tr>
+<tr class="odd">
+<td>=</td>
+<td>Logical comparison (equal to)</td>
+</tr>
+<tr class="even">
+<td>&gt;</td>
+<td>Logical comparison (greater than)</td>
+</tr>
+<tr class="odd">
+<td>&lt;</td>
+<td>Logical comparison (less than)</td>
+</tr>
+<tr class="even">
+<td>&gt;=</td>
+<td>Logical comparison (greater than or equal to)</td>
+</tr>
+<tr class="odd">
+<td>&lt;=</td>
+<td>Logical comparison (less than or equal to)</td>
+</tr>
+<tr class="even">
+<td>&lt;&gt;</td>
+<td>Logical comparison (not equal to)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="function-basics" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="function-basics"><span class="header-section-number">2.3</span> Function Basics</h2>
+<p>A function is a predefined formula that performs calculations or task using specific values in a particular order. These functions are designed to simplify complex calculations and streamline repetitive tasks, saving you time and effort.</p>
+<section id="syntax" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="syntax"><span class="header-section-number">2.3.1</span> Syntax</h3>
+<p>Every Excel function follows a standardized syntax, consisting of the function name, followed by parentheses enclosing one or more arguments. Arguments are the inputs provided to the function, which determine its behavior and output. Understanding the syntax of a function is crucial for using it correctly. Let’s break it down:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>=FUNCTION_NAME(argument1, argument2, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p><strong>Function Name</strong>: This is the name of the function that defines its purpose. Examples include SUM, AVERAGE, IF, VLOOKUP, etc.</p></li>
+<li><p><strong>Arguments</strong>: These are the values or cell references provided to the function to perform the desired calculation. The number and type of arguments vary depending on the function.</p></li>
+</ul>
+</section>
+</section>
+<section id="referencing-cells-in-other-worksheets" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="referencing-cells-in-other-worksheets"><span class="header-section-number">2.4</span> Referencing Cells in Other Worksheets</h2>
+<p>To use a reference to a cell in another worksheet in the same workbook, use this format:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>=SheetName!CellAddress</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In other words, precede the cell address with the worksheet name followed by an exclamation point. Here’s an example of a formula that uses a cell on the Sheet2 worksheet:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>=A1*Sheet2!A1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This formula multiplies the value in cell A1 on the current worksheet by the value in cell A1 on Sheet2.</p>
+</section>
+<section id="referencing-data-in-a-table" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="referencing-data-in-a-table"><span class="header-section-number">2.5</span> Referencing Data in a Table</h2>
+<p>We have discussed about Excel Tables in <a href="intro.html#sec-tables" class="quarto-xref"><span>Section 1.10</span></a>.</p>
+<p>Tables in Excel come with predefined headers for each column. These headers provide an intuitive way to reference data within the table. You can use these headers in formulas and functions to retrieve specific information.</p>
+<p>For instance, you have a table named “PatientData” with columns: “Name”, “Age”, “Sex”, “Days of Hospitalization”. To find the average days of hospitalization, you can use the formula:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>=AVERAGE(PatientData[Days of Hospitalization])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here <code>PatientData[Days of Hospitalization]</code> refers to “Days of Hospitalization” column in the table “PatientData”.</p>
+</section>
+<section id="common-formula-errors" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="common-formula-errors"><span class="header-section-number">2.6</span> Common Formula Errors</h2>
+<p>Sometimes when you enter a formula, Excel displays a value that begins with a hash mark (#). This is a signal that the formula is returning an error value. You have to correct the formula (or correct a cell that the formula references) to get rid of the error display.</p>
+<table class="table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 76%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Error Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>#DIV/0!</td>
+<td>The formula is trying to divide by zero. Because Excel applies a value of 0 to empty cells, this error also occurs when the formula attempts to divide by a cell that is blank or has a value of 0.</td>
+</tr>
+<tr class="even">
+<td>#NAME?</td>
+<td>The formula uses a name that Excel doesn’t recognize. This can happen if you delete a name that’s used in the formula, if you misspell a name and then hit Enter, or if you have unmatched quotes when using text.</td>
+</tr>
+<tr class="odd">
+<td>#N/A</td>
+<td>The formula is referring (directly or indirectly) to a cell that uses the NA function to signal that data is not available. For instance, the following formula returns an #N/A error if the A1 is empty: =IF(A1=““, NA(), A1) Some lookup functions (for example, VLOOKUP and MATCH) can also return #N/A when they do not find a match.</td>
+</tr>
+<tr class="even">
+<td>#NULL!</td>
+<td>The formula uses an intersection of two ranges that don’t intersect. (This concept is described later in the chapter.)</td>
+</tr>
+<tr class="odd">
+<td>#NUM!</td>
+<td>A problem with a value exists; for example, you specified a negative number as an argument where a positive number is required.</td>
+</tr>
+<tr class="even">
+<td>#REF!</td>
+<td>The formula refers to a cell that isn’t valid. This can happen if the cell has been deleted from the worksheet.</td>
+</tr>
+<tr class="odd">
+<td>#VALUE!</td>
+<td>The formula includes an argument or operand of the wrong type. (An operand is a value or cell reference that a formula uses to calculate a result.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="formula-for-common-mathematical-operations" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="formula-for-common-mathematical-operations"><span class="header-section-number">2.7</span> Formula for Common Mathematical Operations</h2>
+<p>Like everyone who has to use Excel, public health students and professionals also will be asked to perform mathematical operations that provide insight into the data. We will see some examples of formulas that will help with this type of analyses.</p>
+</section>
+<section id="calculating-percentages" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="calculating-percentages"><span class="header-section-number">2.8</span> Calculating Percentages</h2>
+<p>Understanding the proportion of individual values in relation to the total is crucial for insightful analysis. Excel simplifies this task with the following formula:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>= (Value / Total) * 100</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here, “Value” represents the specific data point you’re interested in, and “Total” denotes the sum of all relevant values. By multiplying the quotient with 100, you obtain the percentage representation.</p>
+<p>For example, suppose you have a dataset containing the number of cases of a disease for different states in a country and you want to calculate the percentage of the cases in each state out of the total cases in the country. You can use the formula <code>=(Cases in State / Total Cases in Country) * 100</code> to find the percentage for each region.</p>
+<p>Dragging this formula across the dataset will swiftly compute the percentage of cases in each state. <br></p>
+<p>Analyzing variations between two data points is essential for detecting trends or anomalies. The formula for calculating percentage variance is:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>= ((New Value - Old Value) / Old Value) * 100</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this formula, “New Value” signifies the updated or later data point, while “Old Value” represents the initial or previous data point. The difference between the new and old values, divided by the old value and multiplied by 100, yields the percentage variance.</p>
+<p>Consider a scenario where you have data on the number of cases of a disease for two consecutive years. To calculate the percentage increase in cases from one year to the next, you can use the formula <code>=((Cases in Year 2 - Cases in Year 1) / Cases in Year 1) * 100</code>.</p>
+<p>Executing this formula provides a clear percentage representation of the case variation, indicating whether cases have increased or decreased and by what percentage.</p>
+<p>Exercise file is available <a href="exercise/percentage.xlsx">here</a></p>
+</section>
+<section id="counting-values-in-a-range" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="counting-values-in-a-range"><span class="header-section-number">2.9</span> Counting Values in a Range</h2>
+<p>Excel provides several functions to count the values in a range. They allow ypu to quickly tally up occurrences, quantify datasets, and derive valuable insights.</p>
+<section id="count-function" class="level3" data-number="2.9.1">
+<h3 data-number="2.9.1" class="anchored" data-anchor-id="count-function"><span class="header-section-number">2.9.1</span> COUNT() Function</h3>
+<p>The <code>COUNT()</code> function is a fundamental tool for counting numeric values within a dataset. It disregards empty cells and cells containing text or errors.</p>
+<p><strong>Syntax:</strong> <code>=COUNT(value1, [value2], ...)</code></p>
+<p><strong>Example:</strong></p>
+<p>Consider a dataset containing the number of confirmed COVID-19 cases per day in a specific area:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Day</th>
+<th>Confirmed Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Day 1</td>
+<td>350</td>
+</tr>
+<tr class="even">
+<td>Day 2</td>
+<td>520</td>
+</tr>
+<tr class="odd">
+<td>Day 3</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Day 4</td>
+<td>430</td>
+</tr>
+<tr class="odd">
+<td>Day 5</td>
+<td>Error</td>
+</tr>
+<tr class="even">
+<td>Day 6</td>
+<td>650</td>
+</tr>
+</tbody>
+</table>
+<p>To count the the total number of days with reported cases:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>=COUNT(A2:A7)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This formula will return <code>4</code>, as there are four numeric values in the specified range.</p>
+</section>
+<section id="counta-function" class="level3" data-number="2.9.2">
+<h3 data-number="2.9.2" class="anchored" data-anchor-id="counta-function"><span class="header-section-number">2.9.2</span> COUNTA() Function</h3>
+<p>While <code>COUNT()</code> tallies only numeric values, <code>COUNTA()</code> extends its capability to count all non-blank cells, including text and errors.</p>
+<p><strong>Syntax:</strong> <code>=COUNTA(value1, [value2], ...)</code></p>
+<p><strong>Example:</strong></p>
+<p>Using the same dataset, let’s count all non-blank cells:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>=COUNTA(A2:A7)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This formula will return <code>5</code>, including both numeric values and the error.</p>
+</section>
+<section id="countif-function" class="level3" data-number="2.9.3">
+<h3 data-number="2.9.3" class="anchored" data-anchor-id="countif-function"><span class="header-section-number">2.9.3</span> COUNTIF() Function</h3>
+<p>The <code>COUNTIF()</code> function is invaluable for counting cells that meet specific criteria within a dataset.</p>
+<p><strong>Syntax:</strong> <code>=COUNTIF(range, criteria)</code></p>
+<p><strong>Example:</strong></p>
+<p>Suppose we want to count the number of days confirmed cases exceeding 400:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>=COUNTIF(A2:A7, "&gt;400")</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This formula will return <code>3</code>, indicating there are three days in which number of daily confirmed cases were greater than 400.</p>
+</section>
+<section id="countifs-function" class="level3" data-number="2.9.4">
+<h3 data-number="2.9.4" class="anchored" data-anchor-id="countifs-function"><span class="header-section-number">2.9.4</span> COUNTIFS() Function</h3>
+<p>Similar to <code>COUNTIF()</code>, <code>COUNTIFS()</code> extends its functionality to count cells based on multiple criteria.</p>
+<p><strong>Syntax:</strong> <code>=COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2], ...)</code></p>
+<p><strong>Example:</strong></p>
+<p>Consider a scenario where we want to count the days with more than 100 cases in a specific region. We can use COUNTIFS() to achieve this by specifying both the region and the case count threshold.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>=COUNTIFS(A2:A7, "&gt;400", B2:B7, "Region A")</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>Excel enables you to enter flexible formulas that use the values (or even text) in cells to calculate a result. When you enter a formula into a cell, the formula’s result appears in the cell. If you change any of the cells used by a formula, the formula recalculates and shows the new result.<span class="citation" data-cites="allen2017">(<a href="references.html#ref-allen2017" role="doc-biblioref">Allen and Feigl 2017</a>)</span></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>abs, round</p>
+</blockquote>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-allen2017" class="csl-entry" role="listitem">
+Allen, Luke N, and Andrea B Feigl. 2017. <span>“What’s in a Name? A Call to Reframe Non-Communicable Diseases.”</span> <em>The Lancet Global Health</em> 5 (2): e129–30. <a href="https://doi.org/10.1016/S2214-109X(17)30001-3">https://doi.org/10.1016/S2214-109X(17)30001-3</a>.
+</div>
+</div>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./intro.html" class="pagination-link" aria-label="Getting Started">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting Started</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./visualizations.html" class="pagination-link" aria-label="Creating Visuals">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Creating Visuals</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Excel Workshop 2024 Handbook was written by Razi N.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

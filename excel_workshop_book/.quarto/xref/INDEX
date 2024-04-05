@@ -1,0 +1,26 @@
+{
+  "summary.qmd": {
+    "summary.html": "a4e25af7"
+  },
+  "index.qmd": {
+    "index.html": "8c5928cf"
+  },
+  "intro.qmd": {
+    "intro.html": "39af23c9"
+  },
+  "references.qmd": {
+    "references.html": "fb7dd267"
+  },
+  "formula.qmd": {
+    "formula.html": "b39afcc9"
+  },
+  "visualizations.qmd": {
+    "visualizations.html": "7c98ce8e"
+  },
+  "analysis.qmd": {
+    "analysis.html": "915a54b8"
+  },
+  "power_query.qmd": {
+    "power_query.html": "98227fcb"
+  }
+}

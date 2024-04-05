@@ -1,0 +1,65 @@
+{
+    "sources": [
+        {
+            "DOI": "10.1093/comjnl/27.2.97",
+            "ISSN": "0010-4620",
+            "URL": "https://doi.org/10.1093/comjnl/27.2.97",
+            "author": [
+                {
+                    "family": "Knuth",
+                    "given": "Donald E."
+                }
+            ],
+            "container-title": "Comput. J.",
+            "id": "knuth84",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1984,
+                        5
+                    ]
+                ]
+            },
+            "page": "97-111",
+            "publisher": "Oxford University Press, Inc.",
+            "publisher-place": "USA",
+            "title": "Literate programming",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "DOI": "10.1016/S2214-109X(17)30001-3",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2214109X17300013",
+            "author": [
+                {
+                    "family": "Allen",
+                    "given": "Luke N"
+                },
+                {
+                    "family": "Feigl",
+                    "given": "Andrea B"
+                }
+            ],
+            "container-title": "The Lancet Global Health",
+            "id": "allen2017",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        2
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "e129-e130",
+            "title": "What’s in a name? A call to reframe non-communicable diseases",
+            "type": "article-journal",
+            "volume": "5"
+        }
+    ],
+    "project_biblios": [
+        "references.bib"
+    ]
+}
