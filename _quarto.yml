@@ -2,10 +2,8 @@ project:
   type: book
 
 book:
-  title: "Excel Workshop 2024"
-  subtitle: "Document with the notes, exercise files and reference links"
+  title: "Excel for Public Health Students"
   author: "Razi N"
-  date: "04/04/2024"
   page-footer:
     left:  |
       Excel Workshop 2024 Handbook was written by Razi N.

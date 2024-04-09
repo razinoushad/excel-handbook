@@ -139,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./power_query.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Importing Data from Other Sources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Power Query</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -160,7 +160,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#creating-charts" id="toc-creating-charts" class="nav-link active" data-scroll-target="#creating-charts"><span class="header-section-number">3.1</span> Creating Charts</a></li>
+  <li><a href="#customizing-charts" id="toc-customizing-charts" class="nav-link" data-scroll-target="#customizing-charts"><span class="header-section-number">3.2</span> Customizing Charts</a></li>
+  <li><a href="#using-shapes" id="toc-using-shapes" class="nav-link" data-scroll-target="#using-shapes"><span class="header-section-number">3.3</span> Using Shapes</a>
+  <ul class="collapse">
+  <li><a href="#inserting-shapes" id="toc-inserting-shapes" class="nav-link" data-scroll-target="#inserting-shapes"><span class="header-section-number">3.3.1</span> Inserting Shapes</a></li>
+  <li><a href="#formatting-shapes" id="toc-formatting-shapes" class="nav-link" data-scroll-target="#formatting-shapes"><span class="header-section-number">3.3.2</span> Formatting Shapes</a></li>
+  <li><a href="#creating-dynamic-labels" id="toc-creating-dynamic-labels" class="nav-link" data-scroll-target="#creating-dynamic-labels"><span class="header-section-number">3.3.3</span> Creating Dynamic Labels</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -184,8 +197,91 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Data visualization is a graphical representation of data. It can transform your raw data into meaningful visual stories and identify trends faster. It also helps in communicating complex information effectively.</p>
+<p>This chapter provides a walk through of Excel’s fundamental visualization capabilities. Rather than going deeply into in depth details, we aim to make you confident in navigating menu options independently. We assume that you know what you want, and just require guidance on execution. For a comprehensive understanding of visualization principles, we strongly suggest referring a good general visualization book. Our recommendation is <a href="https://amzn.in/d/45SLf1n">The Truthful Art</a> by Albert Cairo. It doesn’t teach the mechanics of creating visualizations, but instead focuses on what you need to think about in order to create effective graphics.</p>
+<section id="creating-charts" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="creating-charts"><span class="header-section-number">3.1</span> Creating Charts</h2>
+<p>In this section, we’ll walk through the steps to create charts in Excel, allowing you to convey your message with precision and impact.</p>
+<ol type="1">
+<li><p><strong>Prepare Your Data</strong></p>
+<ul>
+<li>Ensure your data is organized in a table format with clear labels for rows and columns.</li>
+<li>Select the data range you want to include in your chart, including headers if applicable.</li>
+</ul></li>
+<li><p><strong>Insert a Chart</strong></p>
+<ul>
+<li>With your data selected, navigate to the “Insert” tab in the Excel ribbon.</li>
+<li>Click on the desired chart type from the “Charts” group. Common options include Column, Line, Pie, Bar, and Scatter.</li>
+<li>Selecting the desired chart type will automatically create a basic chart using your selected data.</li>
+</ul>
+<p><img src="images/chart-insert.png" class="img-fluid" width="635"></p></li>
+<li><p><strong>Customize Your Chart</strong></p>
+<ul>
+<li>Once your chart is created, you can customize it to better suit your needs.</li>
+<li>Click on the chart to select it, and then navigate to the “Chart Design” and “Chart Format” tabs in the ribbon.</li>
+<li>From here, you can change chart elements such as titles, axes labels, legends, colors, and styles.</li>
+</ul>
+<p><img src="images/chart-tabs.png" class="img-fluid" width="666"></p></li>
+<li><p><strong>Add Data Labels and Annotations (Optional)</strong></p>
+<ul>
+<li>To make your chart more informative, you can add data labels, annotations, or other elements.</li>
+<li>Right-click on the chart element you want to modify and select “Add Data Labels” or “Add Chart Element” to insert annotations, such as trendlines or error bars.</li>
+</ul>
+<p><img src="images/chart-data-label.png" class="img-fluid" width="543"></p></li>
+<li><p><strong>Share Your Chart</strong></p>
+<ul>
+<li>To share your chart with others, you can either share the entire workbook or copy and paste the chart into other documents or presentations.</li>
+</ul></li>
+</ol>
+</section>
+<section id="customizing-charts" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="customizing-charts"><span class="header-section-number">3.2</span> Customizing Charts</h2>
+<p>You can customize the chart created from “Chart Design” and “Format” tabs in the ribbon.</p>
+<ol type="1">
+<li><p><strong>Chart Elements:</strong> Excel provides an extensive range of chart elements to enhance clarity and aesthetics. These elements include titles, axis labels, data labels, gridlines, legends, and trendlines. Each element can be customized to suit your presentation needs.</p></li>
+<li><p><strong>Chart Styles:</strong> Excel offers pre-designed chart styles, enabling you to quickly apply professional-looking formatting to your charts. These styles have different color schemes, line weights, and shading effects, allowing you to match your chart’s appearance with your overall document or presentation theme.</p></li>
+</ol>
+<p><img src="images/chart-design.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li><strong>Formatting:</strong> Excel provides different formatting options to customize the appearance of your charts and tailor them to your specific requirements. You can adjust colors, fonts, borders, and other visual attributes to create visually appealing and professional-looking charts.</li>
+</ol>
+<p><img src="images/chart-formatting.png" class="img-fluid"></p>
+</section>
+<section id="using-shapes" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="using-shapes"><span class="header-section-number">3.3</span> Using Shapes</h2>
+<p>Excel provides variety of customizable graphic images known as shapes. You can use them to display text or add some visual appearance to a worksheet.</p>
+<section id="inserting-shapes" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="inserting-shapes"><span class="header-section-number">3.3.1</span> Inserting Shapes</h3>
+<ol type="1">
+<li>To insert a shape, navigate to the “Insert” tab on the Excel ribbon. Click on the “Shapes” button located in the “Illustrations” group. A dropdown menu will appear, offering a variety of shape categories to choose from, including basic shapes, arrows, flowchart elements, and more.</li>
+</ol>
+<p><img src="images/shape-insert.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li><p>Once you’ve chosen a category, simply click on the desired shape to select it. Your cursor will now transform into a crosshair, allowing you to draw the shape directly onto your worksheet. Click and drag to define the size and proportions of the shape.</p></li>
+<li><p>Excel also allows for the insertion of custom shapes. To do this, select “Edit Shape” from the dropdown menu after clicking on a shape. Here, you can modify the shape’s vertices and curves to create a custom design tailored to your needs.</p></li>
+</ol>
+</section>
+<section id="formatting-shapes" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="formatting-shapes"><span class="header-section-number">3.3.2</span> Formatting Shapes</h3>
+<ol type="1">
+<li><strong>Fill and Outline:</strong> After inserting a shape, you can customize its appearance using the formatting options available in the “Format Shape” pane. To access this pane, right-click on the shape and select “Format Shape” from the context menu. Here, you can adjust the fill color, outline color, and effects such as shadows and reflections.</li>
+</ol>
+<p><img src="images/shape-style.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li><p><strong>Shape Styles:</strong> Excel offers a range of predefined shape styles that can be applied with a single click. These styles include variations in fill color, outline weight, and effects, allowing you to quickly achieve a polished look for your shapes.</p></li>
+<li><p><strong>Size and Position:</strong> Precise control over a shape’s size and position is essential for achieving a professional layout. Use the sizing handles to adjust the dimensions of the shape, or enter specific values in the “Size &amp; Properties” pane. To align multiple shapes, utilize the alignment tools available in the “Format” tab.</p></li>
+<li><p><strong>Grouping and Layering:</strong> When working with multiple shapes, grouping them together can simplify manipulation and formatting. Select the shapes you wish to group, right-click, and choose “Group” from the context menu. Additionally, you can change the stacking order of shapes using the “Bring Forward” and “Send Backward” options.</p></li>
+</ol>
+<p><img src="images/shape-format.png" class="img-fluid"></p>
+</section>
+<section id="creating-dynamic-labels" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="creating-dynamic-labels"><span class="header-section-number">3.3.3</span> Creating Dynamic Labels</h3>
+<p>Dynamic labels are the labels that changes with the changes in the underlying data. The below figure illustrates this. The selected text box shape is linked to cell E11 in Calculations worksheet. As the value of this cell changes, the text box displays updated value. To add dynamic labels, select the text box or shape and enter the cell reference in formula bar.</p>
+<p><img src="images/dynamic-label.png" class="img-fluid" width="560"></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

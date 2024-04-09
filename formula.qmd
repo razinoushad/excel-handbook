@@ -1,6 +1,8 @@
 # Formulas and Functions
 
-As said earlier, formulas are what makes spreadsheet a spreadsheet. You use formulas in your Excel worksheets to calculate results from the data stored in the worksheet. When data changes, the formulas calculate updated results with no extra effort on your part.
+> This chapter is not complete or sorted. We are working on this currently.
+
+As said earlier, formulas are what makes spreadsheet a spreadsheet. You use formulas in your Excel worksheets to calculate results from the data stored in the worksheet. When data changes, the formulas calculate updated results with no extra effort on your part. <br> In this book, we will not be explaining each and every formula or function in detail. Instead, we try to equip you with the ability to understand a function and how to apply it by looking at the syntax and utilizing the built-in help feature in Microsoft Excel. There is little use committing every function to memory when assistance is readily accessible alongside each function. Also, Excel continually introduces newer, more efficient functions and understanding fundamental principles of functions is more important.
 
 ## Formula Basics
 
@@ -94,7 +96,7 @@ Here `PatientData[Days of Hospitalization]` refers to "Days of Hospitalization" 
 Sometimes when you enter a formula, Excel displays a value that begins with a hash mark (#). This is a signal that the formula is returning an error value. You have to correct the formula (or correct a cell that the formula references) to get rid of the error display.
 
 | Error Value | Explanation                                                                                                                                                                                                                                                                                                                               |
-|-----------------|-------------------------------------------------------|
+|-------------------|-----------------------------------------------------|
 | #DIV/0!     | The formula is trying to divide by zero. Because Excel applies a value of 0 to empty cells, this error also occurs when the formula attempts to divide by a cell that is blank or has a value of 0.                                                                                                                                       |
 | #NAME?      | The formula uses a name that Excel doesn't recognize. This can happen if you delete a name that's used in the formula, if you misspell a name and then hit Enter, or if you have unmatched quotes when using text.                                                                                                                        |
 | #N/A        | The formula is referring (directly or indirectly) to a cell that uses the NA function to signal that data is not available. For instance, the following formula returns an #N/A error if the A1 is empty: =IF(A1="", NA(), A1) Some lookup functions (for example, VLOOKUP and MATCH) can also return #N/A when they do not find a match. |
@@ -212,32 +214,6 @@ Consider a scenario where we want to count the days with more than 100 cases in 
 =COUNTIFS(A2:A7, ">400", B2:B7, "Region A")
 ```
 
-
-
-
-
 > Excel enables you to enter flexible formulas that use the values (or even text) in cells to calculate a result. When you enter a formula into a cell, the formula's result appears in the cell. If you change any of the cells used by a formula, the formula recalculates and shows the new result.[@allen2017]
 
-> abs
-round
-count
-sum
-sumif
-vlookup
-xlookup
-index match
-if
-ifs
-textjoin
-concatenate
-sentence case
-trim
-left
-right
-mid
-len
-today
-now
-="Today is "&TEXT(TODAY(),"mmmm d, yyyy")
-datedif
-extract year monmth day
+> abs round count sum sumif vlookup xlookup index match if ifs textjoin concatenate sentence case trim left right mid len today now ="Today is"&TEXT(TODAY(),"mmmm d, yyyy") datedif extract year monmth day

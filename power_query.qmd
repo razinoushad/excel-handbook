@@ -1,1 +1,93 @@
-# Importing Data from Other Sources
+# Power Query
+
+Power Query enhances the experience pf extracting data from a wide variety of sources, perform complex transformations on that data, and then load the data into a workbook. In your work, repetitive data preparation tasks can be time-consuming. Power Query enables automation of these tasks. By creating reusable query templates, you can streamline workflows and update analyses with minimal effort when new data becomes available.
+
+## Using Power Query to Load and Transform Data
+
+### Importing Data
+
+1.  **Accessing Power Query**: 
+
+    -   To begin using Power Query, navigate to the "Data" tab on the ribbon. From there, select "Get Data". You'll find various options like files, databases, or online services. For this example, we'll import data from an Excel workbook.
+
+    ![](images/pq-start.png){width="561"}
+
+2.  **Importing Data**:
+
+    -   Click on "From Excel Workbook" and browse to select the file containing your data. Click "Import".
+
+    ![](images/pq-file.png){width="452"}
+
+    -   The Navigator pane will appear as shown in the figure. Choose the specific worksheet or named range that you want to import. When you click on each table, you can see a preview of the data.
+    -   Click on "Transform Data". It will open Power Query Editor window, where you can transform the data (clean, add more columns, filter unwanted data, etc) before loading into Excel. If you don't wish to tranform the data or your data is already cleaned, then you can click on the "Load" button.
+
+    ![](images/pq-import.png){width="755"}
+
+### Simple Data Transformation in Power Query
+
+Once you've imported your data into Power Query, you can perform several transformations to clean and refine it form the Power Query Editor Window. Here, we are mentioning only a few of them.
+
+1.  **Removing Unnecessary Columns**:
+
+    -   In the Power Query Editor window, review the data in the "Queries" pane on the left.
+    -   Click on a query to see its data preview in the main window.
+    -   To remove columns, select the column header(s), right-click, and choose "Remove" or "Remove Other Columns" to keep only the desired data.
+
+    ![](images/pq-remove.png){width="580"}
+
+2.  **Filtering Rows**:
+
+    -   Use filters to exclude rows based on specific criteria.
+    -   Click on the filter icon in the column header and define your filter conditions (e.g., only include rows where a certain column's value is less than a particular number).
+    -   You can also filter to remove blank rows.
+
+    ![](images/pq-filter.png){width="527"}
+
+3.  **Adding Custom Columns**:
+
+    -   Sometimes you need to derive new information from existing data.
+    -   Click on "Add Column" in the ribbon and choose "Custom Column."
+
+    ![](images/pq-custom-variable.png){width="443"}
+
+    -   Write a formula to create a new calculated column based on your requirements.
+
+    ![](images/pq-bmi-formula.png){width="558"}
+
+4.  **Data Type and Format Adjustments**:
+
+    -   Ensure that each column is assigned the correct data type (e.g., text, number, date) to avoid issues during analysis.
+    -   Use the "Transform" tab to adjust formats or convert data types.
+    -   You can also right-click on the column header and choose "Change Type" to convert the data type.
+
+    ![](images/pq-type.png){width="409"}
+    
+The Applied Steps pane displays a sequential list of all the transformation steps that have been applied to your data. Each step represents a specific action or transformation applied to the dataset.
+
+![](images/pq-step.png){width="461"}
+
+
+### Applying Changes and Loading Data
+
+After applying the necessary transformations:
+
+1.  **Preview Changes**:
+
+    -   Review the updated data in the Power Query Editor to ensure it meets your needs.
+
+2.  **Applying Changes**:
+
+    -   Click on "Close & Load" to bring the cleaned data back into Excel.
+
+    ![](images/pq-load.png){width="558"}
+
+<br>
+
+![](images/pq-excel.png){width="1076"}
+
+<br>
+
+
+
+
+> This part is yet to be completed

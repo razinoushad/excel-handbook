@@ -100,7 +100,7 @@ When you paste the information, Excel overwrites any cells that is in the destin
 Some useful paste options are as follows:
 
 | Select                       | To Paste                                                                                               |
-|-----------------------|------------------------------------------------|
+|------------------------|------------------------------------------------|
 | Paste                        | All cell contents and formatting, including linked data                                                |
 | Formulas                     | Only the formulas                                                                                      |
 | Formulas & Number Formatting | Pastes formulas and number formatting only                                                             |
@@ -185,17 +185,16 @@ Once you've created a table, sorting and filtering data becomes incredibly effic
 2.  **Filtering Data**: Filtering allows you to display only specific rows of data based on criteria you define. Click on the dropdown arrow in the header of the column you want to filter. You can then select specific values to display or use custom filter options for more complex filtering conditions.
 
     *Example:* In a table containing patients information, you can filter the "Department" column to show only patient from the "Cardiology" department.
-    
+
 ### Naming a Table
 
 Assigning names to tables in Excel is a straightforward process, yet its implications are profound.
 
-1. **Select the Table:** Begin by selecting the range of cells that constitute your table. 
+1.  **Select the Table:** Begin by selecting the range of cells that constitute your table.
 
-2. **Navigate to the 'Table Design' Tab:** Once your table is selected, navigate to the 'Table Design' tab on the Excel ribbon. Here, you'll find a `Table Name` option.
+2.  **Navigate to the 'Table Design' Tab:** Once your table is selected, navigate to the 'Table Design' tab on the Excel ribbon. Here, you'll find a `Table Name` option.
 
-3. **Enter a Name:** Below the `Table Name` option, there is a textbox where you can enter the name for the table. Give the table a name and press "Enter".
-
+3.  **Enter a Name:** Below the `Table Name` option, there is a textbox where you can enter the name for the table. Give the table a name and press "Enter".
 
 ### Changing Appearance:
 

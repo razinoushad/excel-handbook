@@ -1,4 +1,3 @@
 # Preface {.unnumbered}
 
-This book written in Quarto.
-The contents in the book are to make beginner level people understand excel software. For that we have oversimplified many functions and commands without going in depth so that people who are not familiar with excel doesn't feel confused. There are many books and articles which explain the commands and functions in detail. You may refer them for getting an in depth understanding of the concepts and behind the scenes. This book is intended to use as an adjuant for the excel workshop conducted by us.
+The contents in the book are to make beginner level people understand excel software. For that we have oversimplified many functions and commands without going in depth so that people who are not familiar with excel doesn't feel confused. There are many books and articles which explain the commands and functions in detail. You may refer them for getting an in depth understanding of the concepts and behind the scenes. This book is intended to use as a companinon for the excel workshop conducted by us.

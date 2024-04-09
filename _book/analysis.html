@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Excel Workshop 2024 - 4&nbsp; Data Cleaning and Analysis</title>
+<title>Excel for Public Health Students - 4&nbsp; Data Cleaning and Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -96,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Excel Workshop 2024</a> 
+      <a href="./">Excel for Public Health Students</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -139,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./power_query.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Importing Data from Other Sources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Power Query</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -160,7 +194,34 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#cleaning-data" id="toc-cleaning-data" class="nav-link active" data-scroll-target="#cleaning-data"><span class="header-section-number">4.1</span> Cleaning Data</a>
+  <ul class="collapse">
+  <li><a href="#remove-duplicate-rows" id="toc-remove-duplicate-rows" class="nav-link" data-scroll-target="#remove-duplicate-rows"><span class="header-section-number">4.1.1</span> Remove Duplicate Rows</a></li>
+  <li><a href="#splitting-text" id="toc-splitting-text" class="nav-link" data-scroll-target="#splitting-text"><span class="header-section-number">4.1.2</span> Splitting Text</a></li>
+  <li><a href="#removing-extra-space" id="toc-removing-extra-space" class="nav-link" data-scroll-target="#removing-extra-space"><span class="header-section-number">4.1.3</span> Removing Extra Space</a></li>
+  <li><a href="#changing-the-case-of-text" id="toc-changing-the-case-of-text" class="nav-link" data-scroll-target="#changing-the-case-of-text"><span class="header-section-number">4.1.4</span> Changing the case of Text</a></li>
+  <li><a href="#converting-values" id="toc-converting-values" class="nav-link" data-scroll-target="#converting-values"><span class="header-section-number">4.1.5</span> Converting Values</a></li>
+  <li><a href="#classifying-values" id="toc-classifying-values" class="nav-link" data-scroll-target="#classifying-values"><span class="header-section-number">4.1.6</span> Classifying Values</a></li>
+  <li><a href="#joining-columns" id="toc-joining-columns" class="nav-link" data-scroll-target="#joining-columns"><span class="header-section-number">4.1.7</span> Joining Columns</a></li>
+  </ul></li>
+  <li><a href="#data-validation" id="toc-data-validation" class="nav-link" data-scroll-target="#data-validation"><span class="header-section-number">4.2</span> Data Validation</a>
+  <ul class="collapse">
+  <li><a href="#specifying-validation-criteria" id="toc-specifying-validation-criteria" class="nav-link" data-scroll-target="#specifying-validation-criteria"><span class="header-section-number">4.2.1</span> Specifying Validation Criteria</a></li>
+  <li><a href="#types-of-validation-criteria" id="toc-types-of-validation-criteria" class="nav-link" data-scroll-target="#types-of-validation-criteria"><span class="header-section-number">4.2.2</span> Types of Validation Criteria</a></li>
+  <li><a href="#creating-a-dropdown-list" id="toc-creating-a-dropdown-list" class="nav-link" data-scroll-target="#creating-a-dropdown-list"><span class="header-section-number">4.2.3</span> Creating a Dropdown List</a></li>
+  </ul></li>
+  <li><a href="#creating-a-dependent-list" id="toc-creating-a-dependent-list" class="nav-link" data-scroll-target="#creating-a-dependent-list"><span class="header-section-number">4.3</span> Creating a Dependent List</a></li>
+  <li><a href="#pivot-tables" id="toc-pivot-tables" class="nav-link" data-scroll-target="#pivot-tables"><span class="header-section-number">4.4</span> Pivot Tables</a>
+  <ul class="collapse">
+  <li><a href="#creating-pivot-table" id="toc-creating-pivot-table" class="nav-link" data-scroll-target="#creating-pivot-table"><span class="header-section-number">4.4.1</span> Creating Pivot Table</a></li>
+  <li><a href="#commands-in-the-pivottable-analyze-tab" id="toc-commands-in-the-pivottable-analyze-tab" class="nav-link" data-scroll-target="#commands-in-the-pivottable-analyze-tab"><span class="header-section-number">4.4.2</span> Commands in the PivotTable Analyze Tab</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -184,8 +245,322 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Data analysis is the process of inspecting, cleaning, transforming, and modeling data to discover useful information, inform conclusions, and support decision-making. Excel is also a tool for data analysis that enables you to manipulate, analyze, and visualize data quickly and easily. Excel can do most of the data analysis jobs you encounter in your day to day activities. For advanced analysis other software can be used.</p>
+<section id="cleaning-data" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="cleaning-data"><span class="header-section-number">4.1</span> Cleaning Data</h2>
+<p>Data cleaning involves fixing or removing incorrect, corrupted, incorrectly formatted, duplicate, or incomplete data within a dataset. When combining various data sources, there are numerous chances for data duplication or misidentification. Inaccurate data can lead to unreliable results and outcomes. Since data cleaning processes differ from one dataset to another, there isn’t a singular approach to outlining precise steps. Nonetheless, it’s crucial to establish a template for your data cleaning process to ensure consistent and correct analysis everytime. In this section, we will see some data cleaning techniques which you must be familiar with.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before cleaning your dataset, consider making a copy of your original dataset. This way, you can always revert to the original data if needed.</p>
+</div>
+</div>
+<section id="remove-duplicate-rows" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="remove-duplicate-rows"><span class="header-section-number">4.1.1</span> Remove Duplicate Rows</h3>
+<p>Duplicate rows can clutter your data and make analysis challenging. Excel provides powerful tools to identify and remove these duplicate entries efficiently.</p>
+<ol type="1">
+<li><p><strong>Select Your Data</strong>: Begin by selecting the range of cells or the entire table from which you want to remove duplicates.</p></li>
+<li><p><strong>Navigate to the Data Tab</strong>: Click on the “Data” tab in the Excel ribbon at the top of the screen.</p></li>
+<li><p><strong>Click on Remove Duplicates</strong>: In the Data Tools group, locate and click on “Remove Duplicates.”</p></li>
+</ol>
+<p><img src="images/duplicate-remove.png" class="img-fluid"></p>
+<ol start="4" type="1">
+<li><p><strong>Choose Columns</strong>: A dialog box will appear listing all the columns in your selected range. You can choose the columns where you want Excel to check for duplicates. By default, all columns are selected.</p></li>
+<li><p><strong>Determine Criteria</strong>: Decide whether you want Excel to consider all columns collectively or only specific columns when identifying duplicates. Check or uncheck the boxes accordingly. For example, if your data have some unique identifier (like ID Card No) then you can select that column only.</p></li>
+<li><p><strong>Remove Duplicates</strong>: After setting your criteria, click “OK.” Excel will process the data and remove any duplicate rows based on your specified criteria.</p></li>
+</ol>
+<p><img src="images/dulpicate-dialog.png" class="img-fluid" width="436"></p>
+<ol start="7" type="1">
+<li><strong>Review Results</strong>: Excel will display a message indicating how many duplicate values were found and removed. Click “OK” to close the message box.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To visually identify duplicates before removing them, apply conditional formatting to highlight duplicate values within your dataset.</p>
+</div>
+</div>
+</section>
+<section id="splitting-text" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="splitting-text"><span class="header-section-number">4.1.2</span> Splitting Text</h3>
+<p>One of the powerful features of Excel is its ability to manipulate and organize data efficiently. The “Split to Columns” function is useful when you need to separate text within cells into multiple columns based on a delimiter or a specific character. This feature can save you time and effort, especially when dealing with large datasets.</p>
+<ol type="1">
+<li><p><strong>Select Your Data Range:</strong><br>
+First, make sure the column that contains the data to be split up has enough empty columns to the right to accommodate the extracted data. Select the cells that contain the text you want to split into columns. Ensure that each cell contains the text you wish to separate.</p></li>
+<li><p><strong>Navigate to the Data Tab:</strong><br>
+Go to the Excel ribbon and click on the “Data” tab.</p></li>
+<li><p><strong>Choose “Text to Columns”:</strong><br>
+Within the “Data Tools” group, locate and click on “Text to Columns.” This action will launch the “Convert Text to Columns Wizard.”</p></li>
+</ol>
+<p><img src="images/split-text.png" class="img-fluid"></p>
+<ol start="4" type="1">
+<li><p><strong>Select the Delimiter:</strong><br>
+In the first step of the wizard, you’ll be prompted to choose how you want to split your data. Excel gives you the option to split by delimiter (such as commas, spaces, tabs, or custom characters used to separates text items) or by fixed width. Choose the appropriate option based on your data format and click “Next.”</p></li>
+<li><p><strong>Specify Delimiter Settings (if applicable):</strong><br>
+If you selected to split by delimiter, specify which delimiter Excel should use for splitting your text. You can choose from predefined delimiters like Tab, Semicolon, Comma, Space, or specify a custom delimiter. Preview the results in the Data preview window to ensure the split is as expected.</p></li>
+<li><p><strong>Configure Column Data Format (if needed):</strong><br>
+In the next step, you can format each column of data. Choose the data format (General, Text, Date, etc.) for each column or keep it as is. Click “Finish” once you are satisfied with your selections.</p></li>
+<li><p><strong>Review Your Split Data:</strong><br>
+Excel will automatically split the selected text into separate columns based on your specifications. Review the resulting columns to ensure the split was successful and meets your requirements.</p></li>
+</ol>
+<p><img src="images/split-wizard.png" class="img-fluid" width="430"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Always use the Data preview window to see how your text will be split before finalizing the operation.</p>
+</div>
+</div>
+</section>
+<section id="removing-extra-space" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="removing-extra-space"><span class="header-section-number">4.1.3</span> Removing Extra Space</h3>
+<p>Sometimes, the data contains extra spaces. It is very difficult to spot a space character at the end of a text string. It can cause problems when you are doing analysis. For example, ‘Male’ is not same as ‘Male’. When you do analysis, there will be two variable values ‘Male’ and ‘Male’, but basically both are the same.</p>
+<p>To solve this, use the TRIM() function, which removes leading and trailing spaces while condensing multiple interior spaces into a single space.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>=TRIM(text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>text</code>: This is the text string from which you want to remove extra spaces.</p>
+</section>
+<section id="changing-the-case-of-text" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="changing-the-case-of-text"><span class="header-section-number">4.1.4</span> Changing the case of Text</h3>
+<p>Mostly, you need to make text in columns consistent in terms of case. Unlike Microsoft Word, Excel doesn’t provide a direct way to do it. But we can change the case using functions. The relevant functions are as follows:</p>
+<ol type="1">
+<li>The <code>UPPER()</code> function converts all letters in a text string to uppercase.</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>=UPPER(text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>The <code>LOWER()</code> function converts all letters in a text string to lowercase.</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>=LOWER(text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>The <code>PROPER()</code> function capitalizes the first letter of each word in a text string and converts all other letters to lowercase.</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>=PROPER(text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="converting-values" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5" class="anchored" data-anchor-id="converting-values"><span class="header-section-number">4.1.5</span> Converting Values</h3>
+<p>The <code>CONVERT()</code> function allows you to convert a measurement from one unit to another within the same measurement category.</p>
+<p>The <code>CONVERT()</code> function in Excel follows a specific syntax:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>=CONVERT(number, from_unit, to_unit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>number</strong>: This is the value you want to convert.</li>
+<li><strong>from_unit</strong>: The current unit of the value you want to convert.</li>
+<li><strong>to_unit</strong>: The unit to which you want to convert the value.</li>
+</ul>
+<p>Imagine you have a dataset containing temperature recorded in Fahrenheit (F) in cell A1, and you need to convert these weights to Celsius (C) for analysis or reporting purposes. Let’s use the <code>CONVERT()</code> function to do this conversion.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>=CONVERT(A1,"F","C")</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this example:</p>
+<ul>
+<li>A1: contain the temperature reading in Fahrenheit</li>
+<li>“F”: represent the temperature in Fahrenheit</li>
+<li>“C”: indicates the desired unit for conversion(Celsius)</li>
+</ul>
+</section>
+<section id="classifying-values" class="level3" data-number="4.1.6">
+<h3 data-number="4.1.6" class="anchored" data-anchor-id="classifying-values"><span class="header-section-number">4.1.6</span> Classifying Values</h3>
+<p>Often, you may have values that need to be classified into a group. In Excel, you can classify values into groups using the <code>IFS()</code> function along with logical tests. The <code>IFS()</code> function allows you for multiple conditions to be evaluated, and based on whether the condition is true or false, return different values. This can be used effectively to create categories or groups for your data.</p>
+<p>Suppose you have data on the ages of participants of a survey in column A, and you want to classify these values into three groups:</p>
+<ul>
+<li>Child: Values less than 18</li>
+<li>Adult: Values between 18 and 60 (inclusive)</li>
+<li>Elder: Values greater than 60</li>
+</ul>
+<p>In an adjacent column (e.g., column B), enter the following formula in the first cell (e.g., B2) to classify the value in A2:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>=IFS(A2&lt;18,"Child", A2&lt;=60,"Adult", A2&gt;60,"Elder")</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can extend the formula down the column by dragging the cell handle. This will automatically apply the formula to all the cells in the column.</p>
+<p><img src="images/classify-values.png" class="img-fluid" width="423"></p>
+</section>
+<section id="joining-columns" class="level3" data-number="4.1.7">
+<h3 data-number="4.1.7" class="anchored" data-anchor-id="joining-columns"><span class="header-section-number">4.1.7</span> Joining Columns</h3>
+<p>Combining text from different columns into a single cell can be efficiently achieved using the <code>CONCAT()</code> or <code>TEXTJOIN()</code> functions.</p>
+<section id="using-concat-function" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="using-concat-function">Using CONCAT() Function</h4>
+<p>The <code>CONCAT()</code> function in Excel is used to concatenate, or join, text from different cells or ranges into one cell. It is particularly useful when you want to combine text strings without using any delimiter (a character that separates text items). You can include additional separators or formatting within the CONCAT() function to control how the text is combined (e.g., adding spaces, commas, etc.).</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>=CONCAT(text1, [text2], ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>text1</strong>: This is the first text or cell reference that you want to concatenate.</li>
+<li><strong>[text2]</strong>: Additional text or cell references that you want to join.</li>
+</ul>
+<p>See the example in figure below:</p>
+<p><img src="images/concat.png" class="img-fluid" width="400"></p>
+</section>
+<section id="using-textjoin-function" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="using-textjoin-function">Using TEXTJOIN() Function</h4>
+<p>The TEXTJOIN() function allows you to concatenate text from a range of cells with specified delimiters (such as commas, spaces, or custom characters) between each item. This function is highly flexible and can handle situations where you need to skip empty cells or include only non-empty values.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>=TEXTJOIN(delimiter, ignore_empty, text1, [text2], ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>delimiter</strong>: The delimiter to be used between each text item.</li>
+<li><strong>ignore_empty</strong>: A logical value (TRUE or FALSE) that specifies whether to ignore empty cells.</li>
+<li><strong>text1, text2, …</strong>: The text values or cell ranges that you want to concatenate.</li>
+</ul>
+<p>See the example in figure below:</p>
+<p><img src="images/text-join.png" class="img-fluid" width="400"></p>
+</section>
+</section>
+</section>
+<section id="data-validation" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="data-validation"><span class="header-section-number">4.2</span> Data Validation</h2>
+<p>Data validation is a powerful feature that allows you to control what type of data can be entered into a cell. For example, you may want to limt the data entry in a particular range to whole numbers between 1 and 100. If you make an invalid entry, you can display a custom message. By setting validation criteria, you can ensure data integrity, accuracy, and consistency throughout your spreadsheets. Let’s see how to use data validation effectively.</p>
+<section id="specifying-validation-criteria" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="specifying-validation-criteria"><span class="header-section-number">4.2.1</span> Specifying Validation Criteria</h3>
+<ol type="1">
+<li><strong>Selecting Cells for Validation:</strong>
+<ul>
+<li>Begin by selecting the cells where you want to apply data validation. You can select a single cell, a range of cells, or even an entire column.</li>
+</ul></li>
+<li><strong>Accessing Data Validation:</strong>
+<ul>
+<li>Navigate to the <strong>Data</strong> tab on the ribbon.</li>
+<li>Click on <strong>Data Validation</strong> in the <strong>Data Tools</strong> group.</li>
+</ul></li>
+<li><strong>Setting Validation Rules:</strong>
+<ul>
+<li>In the Data Validation dialog box, choose the type of validation you want under the <strong>Settings</strong> tab.</li>
+<li>For example, to allow only whole numbers between 1 and 100, select <strong>Whole number</strong> and specify the minimum and maximum values.</li>
+</ul>
+<img src="images/validation-set.png" class="img-fluid" width="750"></li>
+</ol>
+</section>
+<section id="types-of-validation-criteria" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="types-of-validation-criteria"><span class="header-section-number">4.2.2</span> Types of Validation Criteria</h3>
+<p>Excel offers several validation criteria options, including:</p>
+<ul>
+<li><strong>Whole Number:</strong> Restricts input to whole numbers within a specified range.</li>
+<li><strong>Decimal:</strong> Allows decimal numbers within a specified range.</li>
+<li><strong>List:</strong> Limits input to items in a predefined list.</li>
+<li><strong>Date:</strong> Validates input as dates within a specified period.</li>
+<li><strong>Time:</strong> Validates input as times.</li>
+<li><strong>Text Length:</strong> Controls the length of text allowed in a cell.</li>
+<li><strong>Custom:</strong> Uses a custom formula to determine if input is valid.</li>
+</ul>
+</section>
+<section id="creating-a-dropdown-list" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="creating-a-dropdown-list"><span class="header-section-number">4.2.3</span> Creating a Dropdown List</h3>
+<p>Dropdown lists are particularly useful for ensuring data consistency and ease of use. Here’s how to set up a dropdown list using data validation:</p>
+<ol type="1">
+<li><p><strong>Specify List Items:</strong></p>
+<ul>
+<li>Enter the items you want in the dropdown list in a separate column or range.</li>
+</ul></li>
+<li><p><strong>Select Cells for Dropdown:</strong></p>
+<ul>
+<li>Choose the cells where you want the dropdown list to appear.</li>
+</ul></li>
+<li><p><strong>Set Data Validation:</strong></p>
+<ul>
+<li>Access the Data Validation dialog box.</li>
+<li>Choose <strong>List</strong> under <strong>Allow</strong>.</li>
+<li>Specify the source of the list using the range selector or by typing the range directly (e.g., <code>=$E$3:$E$6</code>).</li>
+<li>You can also write the list items in <strong>Source</strong> box, each items seperated by comma.</li>
+</ul>
+<p><img src="images/validation-list.png" class="img-fluid" width="580"></p></li>
+<li><p><strong>Enable the Dropdown:</strong></p>
+<ul>
+<li>Now, the selected cells will display a dropdown arrow, allowing users to choose from the predefined list.</li>
+</ul></li>
+</ol>
+</section>
+</section>
+<section id="creating-a-dependent-list" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="creating-a-dependent-list"><span class="header-section-number">4.3</span> Creating a Dependent List</h2>
+<blockquote class="blockquote">
+<p>this part is yet to be written</p>
+</blockquote>
+</section>
+<section id="pivot-tables" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="pivot-tables"><span class="header-section-number">4.4</span> Pivot Tables</h2>
+<p>The PivotTable feature is perhaps the most technologically sophisticated component in Excel. A pivot table can provide quick answers to questions about your table that can otherwise only be answered by complicated formulas.</p>
+<section id="creating-pivot-table" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="creating-pivot-table"><span class="header-section-number">4.4.1</span> Creating Pivot Table</h3>
+<ol type="1">
+<li><p><strong>Prepare Your Data</strong> Ensure your dataset is organized with column headers and rows of data. Each column should have a clear heading, and there should be no blank rows or columns within the dataset.</p></li>
+<li><p><strong>Select Your Data</strong> Click anywhere inside your dataset. Alternatively, you can manually select the range of cells that contain your data.</p></li>
+<li><p><strong>Insert PivotTable</strong> Navigate to the “Insert” tab on the ribbon at the top of Excel. Click on “PivotTable” in the “Tables” group. This will open the Create PivotTable dialog box.</p></li>
+<li><p><strong>Select Your Data Range</strong> Ensure the correct range of data is selected in the “Table/Range” field of the Create PivotTable dialog box. Excel should automatically detect the range based on your selection in Step 2.</p></li>
+<li><p><strong>Choose Where to Place the PivotTable</strong> Select where you want your PivotTable to be placed. You can either choose to place it in a new worksheet or in an existing worksheet.</p></li>
+<li><p><strong>Click “OK”</strong> Once you’ve selected your data range and the destination for your PivotTable, click “OK”. This will create a new PivotTable or insert one into the designated location.</p>
+<p><img src="images/pivot-table-insert.png" class="img-fluid"></p></li>
+<li><p><strong>Design Your PivotTable</strong></p>
+<ul>
+<li><strong>Fields List:</strong> A new pane will appear on the right, called “PivotTable Fields”. This pane lists all the column headers from your dataset.</li>
+<li><strong>Drag Fields to Areas:</strong> Drag the fields you want to analyze into the different areas of the PivotTable:
+<ul>
+<li><strong>Values:</strong> Drag the fields you want to perform calculations on (e.g., sums, averages) into this area.</li>
+<li><strong>Rows:</strong> Drag fields here to use them as row labels in your PivotTable.</li>
+<li><strong>Columns:</strong> Drag fields here to use them as column labels in your PivotTable.</li>
+<li><strong>Filters:</strong> Drag fields here to use them as filters for your PivotTable.</li>
+</ul></li>
+</ul>
+<p><img src="images/pivot-table-result.png" class="img-fluid"></p></li>
+<li><p><strong>Customize Your PivotTable</strong></p>
+<ul>
+<li><strong>Apply Filters:</strong> Use the dropdown arrows next to field names in the PivotTable to filter data.</li>
+<li><strong>Change Summarization:</strong> Right-Click on any value in the PivotTable, choose “Value Field Settings” to change the calculation type (e.g., sum, count, average).</li>
+<li><strong>Format Your PivotTable:</strong> Modify the PivotTable’s design, style, and layout using options in the “PivotTable Analyze” tab that appears when the PivotTable is selected.</li>
+</ul></li>
+<li><p><strong>Refresh Your PivotTable (if needed)</strong> If your data changes, you can refresh your PivotTable to reflect the updated information. Simply right-click on the PivotTable and choose “Refresh”.</p></li>
+</ol>
+</section>
+<section id="commands-in-the-pivottable-analyze-tab" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="commands-in-the-pivottable-analyze-tab"><span class="header-section-number">4.4.2</span> Commands in the PivotTable Analyze Tab</h3>
+<section id="data" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="data"><strong>Data</strong></h4>
+<ul>
+<li><strong>Refresh</strong>: This command updates the pivot table with the latest data from the source range. It’s useful when your underlying dataset has changed, and you want your pivot table to reflect those changes.</li>
+<li><strong>Change Data Source</strong>: Use this command to modify the source data range for your pivot table. If you’ve added more data to your dataset or want to change the range for any reason, this option is essential.</li>
+</ul>
+</section>
+<section id="actions" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="actions"><strong>Actions</strong></h4>
+<ul>
+<li><strong>Select</strong>: Allows you to select specific elements within your pivot table, such as cells, columns, or rows, for further manipulation.</li>
+<li><strong>Move PivotTable</strong>: You can relocate your pivot table within the same workbook or to a different worksheet using this option.</li>
+<li><strong>Clear</strong>: Removes applied filters or customizations, or formatting from the pivot table.</li>
+</ul>
+</section>
+<section id="fields-items-sets" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="fields-items-sets"><strong>Fields, Items &amp; Sets</strong></h4>
+<ul>
+<li><strong>PivotTable Fields</strong>: Opens or closes the PivotTable Fields pane, which lets you add, remove, or rearrange fields within your pivot table.</li>
+<li><strong>Show/Hide</strong>: Customize the display of various elements in your pivot table, such as subtotals, grand totals, and field headers.</li>
+</ul>
+</section>
+<section id="filter" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="filter"><strong>Filter</strong></h4>
+<ul>
+<li><strong>Insert Slicer</strong>: When you have multiple fields in your PivotTable, inserting a slicer allows you to create visual buttons that can filter data based on the selected criteria.</li>
+<li><strong>Insert Timeline</strong>: It allows you to filter data by specific dates using an interactive timeline control.</li>
+</ul>
+</section>
+<section id="calculations" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="calculations"><strong>Calculations</strong></h4>
+<ul>
+<li><strong>Fields, Items &amp; Sets</strong>: Create calculated fields, calculated items, or calculated sets to extend the functionality of your pivot table with custom calculations.</li>
+</ul>
+<p>The Pivot Table in itself can be written in one whole chapter. But here we are only giving you only the basics of the pivot table. You can learn more about pivot tables from other sources. Consider this section as an introduction to pivot tables and try mastering it since pivot table is one of the most amazing feature in Excel.</p>
+<p>Happy Pivoting!!!</p>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -604,8 +979,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./power_query.html" class="pagination-link" aria-label="Importing Data from Other Sources">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Importing Data from Other Sources</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./power_query.html" class="pagination-link" aria-label="Power Query">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Power Query</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
