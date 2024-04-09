@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Excel Workshop 2024 - 5&nbsp; Importing Data from Other Sources</title>
+<title>Excel for Public Health Students - 5&nbsp; Power Query</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./power_query.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Importing Data from Other Sources</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./power_query.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Power Query</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Excel Workshop 2024</a> 
+      <a href="./">Excel for Public Health Students</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -139,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./power_query.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Importing Data from Other Sources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Power Query</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -160,14 +160,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#using-power-query-to-load-and-transform-data" id="toc-using-power-query-to-load-and-transform-data" class="nav-link active" data-scroll-target="#using-power-query-to-load-and-transform-data"><span class="header-section-number">5.1</span> Using Power Query to Load and Transform Data</a>
+  <ul class="collapse">
+  <li><a href="#importing-data" id="toc-importing-data" class="nav-link" data-scroll-target="#importing-data"><span class="header-section-number">5.1.1</span> Importing Data</a></li>
+  <li><a href="#simple-data-transformation-in-power-query" id="toc-simple-data-transformation-in-power-query" class="nav-link" data-scroll-target="#simple-data-transformation-in-power-query"><span class="header-section-number">5.1.2</span> Simple Data Transformation in Power Query</a></li>
+  <li><a href="#applying-changes-and-loading-data" id="toc-applying-changes-and-loading-data" class="nav-link" data-scroll-target="#applying-changes-and-loading-data"><span class="header-section-number">5.1.3</span> Applying Changes and Loading Data</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Importing Data from Other Sources</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Power Query</span></h1>
 </div>
 
 
@@ -184,8 +195,92 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Power Query enhances the experience pf extracting data from a wide variety of sources, perform complex transformations on that data, and then load the data into a workbook. In your work, repetitive data preparation tasks can be time-consuming. Power Query enables automation of these tasks. By creating reusable query templates, you can streamline workflows and update analyses with minimal effort when new data becomes available.</p>
+<section id="using-power-query-to-load-and-transform-data" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="using-power-query-to-load-and-transform-data"><span class="header-section-number">5.1</span> Using Power Query to Load and Transform Data</h2>
+<section id="importing-data" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="importing-data"><span class="header-section-number">5.1.1</span> Importing Data</h3>
+<ol type="1">
+<li><p><strong>Accessing Power Query</strong>:</p>
+<ul>
+<li>To begin using Power Query, navigate to the “Data” tab on the ribbon. From there, select “Get Data”. You’ll find various options like files, databases, or online services. For this example, we’ll import data from an Excel workbook.</li>
+</ul>
+<p><img src="images/pq-start.png" class="img-fluid" width="561"></p></li>
+<li><p><strong>Importing Data</strong>:</p>
+<ul>
+<li>Click on “From Excel Workbook” and browse to select the file containing your data. Click “Import”.</li>
+</ul>
+<p><img src="images/pq-file.png" class="img-fluid" width="452"></p>
+<ul>
+<li>The Navigator pane will appear as shown in the figure. Choose the specific worksheet or named range that you want to import. When you click on each table, you can see a preview of the data.</li>
+<li>Click on “Transform Data”. It will open Power Query Editor window, where you can transform the data (clean, add more columns, filter unwanted data, etc) before loading into Excel. If you don’t wish to tranform the data or your data is already cleaned, then you can click on the “Load” button.</li>
+</ul>
+<p><img src="images/pq-import.png" class="img-fluid" width="755"></p></li>
+</ol>
+</section>
+<section id="simple-data-transformation-in-power-query" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="simple-data-transformation-in-power-query"><span class="header-section-number">5.1.2</span> Simple Data Transformation in Power Query</h3>
+<p>Once you’ve imported your data into Power Query, you can perform several transformations to clean and refine it form the Power Query Editor Window. Here, we are mentioning only a few of them.</p>
+<ol type="1">
+<li><p><strong>Removing Unnecessary Columns</strong>:</p>
+<ul>
+<li>In the Power Query Editor window, review the data in the “Queries” pane on the left.</li>
+<li>Click on a query to see its data preview in the main window.</li>
+<li>To remove columns, select the column header(s), right-click, and choose “Remove” or “Remove Other Columns” to keep only the desired data.</li>
+</ul>
+<p><img src="images/pq-remove.png" class="img-fluid" width="580"></p></li>
+<li><p><strong>Filtering Rows</strong>:</p>
+<ul>
+<li>Use filters to exclude rows based on specific criteria.</li>
+<li>Click on the filter icon in the column header and define your filter conditions (e.g., only include rows where a certain column’s value is less than a particular number).</li>
+<li>You can also filter to remove blank rows.</li>
+</ul>
+<p><img src="images/pq-filter.png" class="img-fluid" width="527"></p></li>
+<li><p><strong>Adding Custom Columns</strong>:</p>
+<ul>
+<li>Sometimes you need to derive new information from existing data.</li>
+<li>Click on “Add Column” in the ribbon and choose “Custom Column.”</li>
+</ul>
+<p><img src="images/pq-custom-variable.png" class="img-fluid" width="443"></p>
+<ul>
+<li>Write a formula to create a new calculated column based on your requirements.</li>
+</ul>
+<p><img src="images/pq-bmi-formula.png" class="img-fluid" width="558"></p></li>
+<li><p><strong>Data Type and Format Adjustments</strong>:</p>
+<ul>
+<li>Ensure that each column is assigned the correct data type (e.g., text, number, date) to avoid issues during analysis.</li>
+<li>Use the “Transform” tab to adjust formats or convert data types.</li>
+<li>You can also right-click on the column header and choose “Change Type” to convert the data type.</li>
+</ul>
+<p><img src="images/pq-type.png" class="img-fluid" width="409"></p></li>
+</ol>
+<p>The Applied Steps pane displays a sequential list of all the transformation steps that have been applied to your data. Each step represents a specific action or transformation applied to the dataset.</p>
+<p><img src="images/pq-step.png" class="img-fluid" width="461"></p>
+</section>
+<section id="applying-changes-and-loading-data" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="applying-changes-and-loading-data"><span class="header-section-number">5.1.3</span> Applying Changes and Loading Data</h3>
+<p>After applying the necessary transformations:</p>
+<ol type="1">
+<li><p><strong>Preview Changes</strong>:</p>
+<ul>
+<li>Review the updated data in the Power Query Editor to ensure it meets your needs.</li>
+</ul></li>
+<li><p><strong>Applying Changes</strong>:</p>
+<ul>
+<li>Click on “Close &amp; Load” to bring the cleaned data back into Excel.</li>
+</ul>
+<p><img src="images/pq-load.png" class="img-fluid" width="558"></p></li>
+</ol>
+<p><br></p>
+<p><img src="images/pq-excel.png" class="img-fluid" width="1076"></p>
+<p><br></p>
+<blockquote class="blockquote">
+<p>This part is yet to be completed</p>
+</blockquote>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
