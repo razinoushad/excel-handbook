@@ -198,12 +198,6 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -235,7 +229,10 @@ div.csl-indent {
   <li><a href="#counta-function" id="toc-counta-function" class="nav-link" data-scroll-target="#counta-function"><span class="header-section-number">2.9.2</span> COUNTA() Function</a></li>
   <li><a href="#countif-function" id="toc-countif-function" class="nav-link" data-scroll-target="#countif-function"><span class="header-section-number">2.9.3</span> COUNTIF() Function</a></li>
   <li><a href="#countifs-function" id="toc-countifs-function" class="nav-link" data-scroll-target="#countifs-function"><span class="header-section-number">2.9.4</span> COUNTIFS() Function</a></li>
+  <li><a href="#if-function" id="toc-if-function" class="nav-link" data-scroll-target="#if-function"><span class="header-section-number">2.9.5</span> IF() Function</a></li>
+  <li><a href="#ifs-function" id="toc-ifs-function" class="nav-link" data-scroll-target="#ifs-function"><span class="header-section-number">2.9.6</span> IFS() Function</a></li>
   </ul></li>
+  <li><a href="#commonly-used-excel-functions-cheat-sheet" id="toc-commonly-used-excel-functions-cheat-sheet" class="nav-link" data-scroll-target="#commonly-used-excel-functions-cheat-sheet"><span class="header-section-number">2.10</span> Commonly Used Excel Functions Cheat Sheet</a></li>
   </ul>
 </nav>
     </div>
@@ -261,9 +258,6 @@ div.csl-indent {
 </header>
 
 
-<blockquote class="blockquote">
-<p>This chapter is not complete or sorted. We are working on this currently.</p>
-</blockquote>
 <p>As said earlier, formulas are what makes spreadsheet a spreadsheet. You use formulas in your Excel worksheets to calculate results from the data stored in the worksheet. When data changes, the formulas calculate updated results with no extra effort on your part. <br> In this book, we will not be explaining each and every formula or function in detail. Instead, we try to equip you with the ability to understand a function and how to apply it by looking at the syntax and utilizing the built-in help feature in Microsoft Excel. There is little use committing every function to memory when assistance is readily accessible alongside each function. Also, Excel continually introduces newer, more efficient functions and understanding fundamental principles of functions is more important.</p>
 <section id="formula-basics" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="formula-basics"><span class="header-section-number">2.1</span> Formula Basics</h2>
@@ -407,8 +401,8 @@ div.csl-indent {
 <p>Sometimes when you enter a formula, Excel displays a value that begins with a hash mark (#). This is a signal that the formula is returning an error value. You have to correct the formula (or correct a cell that the formula references) to get rid of the error display.</p>
 <table class="table">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 73%">
+<col style="width: 30%">
+<col style="width: 69%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -538,8 +532,187 @@ div.csl-indent {
 <p><strong>Example:</strong></p>
 <p>Consider a scenario where we want to count the days with more than 100 cases in a specific region. We can use COUNTIFS() to achieve this by specifying both the region and the case count threshold.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>=COUNTIFS(A2:A7, "&gt;400", B2:B7, "Region A")</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="if-function" class="level3" data-number="2.9.5">
+<h3 data-number="2.9.5" class="anchored" data-anchor-id="if-function"><span class="header-section-number">2.9.5</span> IF() Function</h3>
+<p>The <code>IF</code> function evaluates whether a condition is met or not and returns one value if the condition is true and another value if the condition is false.</p>
+<p>The syntax of the <code>IF</code> function is:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>=IF(logical_test, value_if_true, value_if_false)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><code>logical_test</code>: This is the condition that you want to evaluate. It can be a logical expression, a cell reference, or another function that returns a logical value (TRUE or FALSE).</li>
+<li><code>value_if_true</code>: The value that is returned if <code>logical_test</code> evaluates to TRUE.</li>
+<li><code>value_if_false</code>: The value that is returned if <code>logical_test</code> evaluates to FALSE.</li>
+</ul>
+<p>Suppose we have a dataset containing cholesterol levels, and we want to categorize individuals as having high cholesterol if their level is greater than 240 mg/dL. We can use the <code>IF</code> function to create a column that identifies whether each individual has high cholesterol or not.</p>
+<p><strong>Example:</strong> Assume cholesterol levels are in column A and start at row 2. In cell B2, enter the formula:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>=IF(A2 &gt; 240, "High Cholesterol", "Normal Cholesterol")</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This formula checks if the value in cell A2 (cholesterol level) is greater than 240. If true, it returns “High Cholesterol”; otherwise, it returns “Normal Cholesterol”.</p>
+</section>
+<section id="ifs-function" class="level3" data-number="2.9.6">
+<h3 data-number="2.9.6" class="anchored" data-anchor-id="ifs-function"><span class="header-section-number">2.9.6</span> IFS() Function</h3>
+<p><code>IFS</code> function extends the capabilities of the <code>IF</code> function by allowing you to evaluate multiple conditions and return a value corresponding to the first TRUE condition.</p>
+<p>The syntax of the <code>IFS</code> function is:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>=IFS(condition1, value_if_true1, [condition2, value_if_true2], ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><code>condition1</code>, <code>condition2</code>, etc.: These are the conditions that you want to evaluate.</li>
+<li><code>value_if_true1</code>, <code>value_if_true2</code>, etc.: These are the values that are returned if the corresponding condition is true.</li>
+</ul>
+<p>Let’s extend the previous example to categorize cholesterol levels into different ranges (Normal, Borderline High, High) using the <code>IFS</code> function.</p>
+<p><strong>Example:</strong> Assume cholesterol levels are in column A and start at row 2. In cell C2, enter the formula:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>=IFS(A2 &gt; 240, "High Cholesterol", A2 &gt; 200, "Borderline High Cholesterol", A2 &gt; 0, "Normal Cholesterol")</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This formula evaluates the cholesterol level in cell A2 against multiple conditions. It returns “High Cholesterol” if A2 &gt; 240, “Borderline High Cholesterol” if A2 &gt; 200 but not greater than 240, and “Normal Cholesterol” if A2 is less than or equal to 200.</p>
+</section>
+</section>
+<section id="commonly-used-excel-functions-cheat-sheet" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="commonly-used-excel-functions-cheat-sheet"><span class="header-section-number">2.10</span> Commonly Used Excel Functions Cheat Sheet</h2>
+<ol type="1">
+<li><p><strong>SUM</strong>: Adds up a range of cells.<br>
+<strong>Syntax</strong>: <code>SUM(number1, [number2], ...)</code><br>
+<strong>Example</strong>: <code>=SUM(A1:A10)</code></p></li>
+<li><p><strong>COUNT</strong>: Counts the number of cells in a range that contain numbers.<br>
+<strong>Syntax</strong>: <code>COUNT(value1, [value2], ...)</code><br>
+<strong>Example</strong>: <code>=COUNT(A1:A10)</code></p></li>
+<li><p><strong>AVERAGE</strong>: Calculates the average of a range of cells.<br>
+<strong>Syntax</strong>: <code>AVERAGE(number1, [number2], ...)</code><br>
+<strong>Example</strong>: <code>=AVERAGE(A1:A10)</code></p></li>
+<li><p><strong>MIN</strong>: Returns the smallest number in a range of cells.<br>
+<strong>Syntax</strong>: <code>MIN(number1, [number2], ...)</code><br>
+<strong>Example</strong>: <code>=MIN(A1:A10)</code></p></li>
+<li><p><strong>MAX</strong>: Returns the largest number in a range of cells.<br>
+<strong>Syntax</strong>: <code>MAX(number1, [number2], ...)</code><br>
+<strong>Example</strong>: <code>=MAX(A1:A10)</code></p></li>
+<li><p><strong>IF</strong>: Checks whether a condition is met, and returns one value if true, and another value if false.<br>
+<strong>Syntax</strong>: <code>IF(logical_test, value_if_true, value_if_false)</code><br>
+<strong>Example</strong>: <code>=IF(A1&gt;10, "Yes", "No")</code></p></li>
+<li><p><strong>TRIM</strong>: Removes all spaces from text except for single spaces between words.<br>
+<strong>Syntax</strong>: <code>TRIM(text)</code><br>
+<strong>Example</strong>: <code>=TRIM(A1)</code></p></li>
+<li><p><strong>LEN</strong>: Returns the number of characters in a text string.<br>
+<strong>Syntax</strong>: <code>LEN(text)</code><br>
+<strong>Example</strong>: <code>=LEN(A1)</code></p></li>
+<li><p><strong>VLOOKUP</strong>: Looks for a value in the first column of a table and returns a value in the same row from a specified column.<br>
+<strong>Syntax</strong>: <code>VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</code><br>
+<strong>Example</strong>: <code>=VLOOKUP(A1, B1:C10, 2, FALSE)</code></p></li>
+<li><p><strong>XLOOKUP</strong>: Searches a range or an array, and returns an item corresponding to the first match it finds. If a match doesn’t exist, then <code>XLOOKUP</code> can return the closest (approximate) match.<br>
+<strong>Syntax</strong>: <code>XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])</code><br>
+<strong>Example</strong>: <code>=XLOOKUP(A1, B1:B10, C1:C10, "Not Found")</code></p></li>
+<li><p><strong>INDEX</strong>: Returns the value of a cell in a specified row and column.<br>
+<strong>Syntax</strong>: <code>INDEX(array, row_num, [column_num])</code><br>
+<strong>Example</strong>: <code>=INDEX(A1:C10, 2, 3)</code></p></li>
+<li><p><strong>MATCH</strong>: Searches for a specified value in a range of cells, and returns the relative position of that item.<br>
+<strong>Syntax</strong>: <code>MATCH(lookup_value, lookup_array, [match_type])</code><br>
+<strong>Example</strong>: <code>=MATCH(A1, B1:B10, 0)</code></p></li>
+<li><p><strong>CONCATENATE</strong>: Joins several text strings into one text string.<br>
+<strong>Syntax</strong>: <code>CONCATENATE(text1, [text2], ...)</code><br>
+<strong>Example</strong>: <code>=CONCATENATE(A1, " ", B1)</code></p></li>
+<li><p><strong>LEFT</strong>: Returns the first character or characters in a text string, based on the number of characters specified.<br>
+<strong>Syntax</strong>: <code>LEFT(text, [num_chars])</code><br>
+<strong>Example</strong>: <code>=LEFT(A1, 3)</code></p></li>
+<li><p><strong>RIGHT</strong>: Returns the last character or characters in a text string, based on the number of characters specified.<br>
+<strong>Syntax</strong>: <code>RIGHT(text, [num_chars])</code><br>
+<strong>Example</strong>: <code>=RIGHT(A1, 3)</code></p></li>
+<li><p><strong>MID</strong>: Returns a specific number of characters from a text string, starting at the position you specify.<br>
+<strong>Syntax</strong>: <code>MID(text, start_num, num_chars)</code><br>
+<strong>Example</strong>: <code>=MID(A1, 2, 3)</code></p></li>
+<li><p><strong>UPPER</strong>: Converts text to uppercase.<br>
+<strong>Syntax</strong>: <code>UPPER(text)</code><br>
+<strong>Example</strong>: <code>=UPPER(A1)</code></p></li>
+<li><p><strong>LOWER</strong>: Converts text to lowercase.<br>
+<strong>Syntax</strong>: <code>LOWER(text)</code><br>
+<strong>Example</strong>: <code>=LOWER(A1)</code></p></li>
+<li><p><strong>PROPER</strong>: Capitalizes the first letter of each word in a text string.<br>
+<strong>Syntax</strong>: <code>PROPER(text)</code><br>
+<strong>Example</strong>: <code>=PROPER(A1)</code></p></li>
+<li><p><strong>NOW</strong>: Returns the current date and time.<br>
+<strong>Syntax</strong>: <code>NOW()</code><br>
+<strong>Example</strong>: <code>=NOW()</code></p></li>
+<li><p><strong>TODAY</strong>: Returns the current date.<br>
+<strong>Syntax</strong>: <code>TODAY()</code><br>
+<strong>Example</strong>: <code>=TODAY()</code></p></li>
+<li><p><strong>DATE</strong>: Returns the number that represents the date in Excel date-time code.<br>
+<strong>Syntax</strong>: <code>DATE(year, month, day)</code><br>
+<strong>Example</strong>: <code>=DATE(2021, 12, 25)</code></p></li>
+<li><p><strong>TIME</strong>: Returns the number that represents the time in Excel date-time code.<br>
+<strong>Syntax</strong>: <code>TIME(hour, minute, second)</code><br>
+<strong>Example</strong>: <code>=TIME(12, 0, 0)</code></p></li>
+<li><p><strong>DAYS</strong>: Returns the number of days between two dates.<br>
+<strong>Syntax</strong>: <code>DAYS(end_date, start_date)</code><br>
+<strong>Example</strong>: <code>=DAYS(B1, A1)</code></p></li>
+<li><p><strong>YEAR</strong>: Returns the year of a date.<br>
+<strong>Syntax</strong>: <code>YEAR(serial_number)</code><br>
+<strong>Example</strong>: <code>=YEAR(A1)</code></p></li>
+<li><p><strong>MONTH</strong>: Returns the month of a date.<br>
+<strong>Syntax</strong>: <code>MONTH(serial_number)</code><br>
+<strong>Example</strong>: <code>=MONTH(A1)</code></p></li>
+<li><p><strong>DAY</strong>: Returns the day of a date.<br>
+<strong>Syntax</strong>: <code>DAY(serial_number)</code><br>
+<strong>Example</strong>: <code>=DAY(A1)</code></p></li>
+<li><p><strong>HOUR</strong>: Returns the hour from a time value.<br>
+<strong>Syntax</strong>: <code>HOUR(serial_number)</code><br>
+<strong>Example</strong>: <code>=HOUR(A1)</code></p></li>
+<li><p><strong>MINUTE</strong>: Returns the minute from a time value.<br>
+<strong>Syntax</strong>: <code>MINUTE(serial_number)</code><br>
+<strong>Example</strong>: <code>=MINUTE(A1)</code></p></li>
+<li><p><strong>SECOND</strong>: Returns the second from a time value.<br>
+<strong>Syntax</strong>: <code>SECOND(serial_number)</code><br>
+<strong>Example</strong>: <code>=SECOND(A1)</code></p></li>
+<li><p><strong>ROUND</strong>: Rounds a number to a specified number of digits.<br>
+<strong>Syntax</strong>: <code>ROUND(number, num_digits)</code><br>
+<strong>Example</strong>: <code>=ROUND(A1, 2)</code></p></li>
+<li><p><strong>ROUNDUP</strong>: Rounds a number up, away from zero.<br>
+<strong>Syntax</strong>: <code>ROUNDUP(number, num_digits)</code><br>
+<strong>Example</strong>: <code>=ROUNDUP(A1, 2)</code></p></li>
+<li><p><strong>ROUNDDOWN</strong>: Rounds a number down, toward zero.<br>
+<strong>Syntax</strong>: <code>ROUNDDOWN(number, num_digits)</code><br>
+<strong>Example</strong>: <code>=ROUNDDOWN(A1, 2)</code></p></li>
+<li><p><strong>CEILING</strong>: Rounds a number up to the nearest multiple of significance.<br>
+<strong>Syntax</strong>: <code>CEILING(number, significance)</code><br>
+<strong>Example</strong>: <code>=CEILING(A1, 1)</code></p></li>
+<li><p><strong>FLOOR</strong>: Rounds a number down to the nearest multiple of significance.<br>
+<strong>Syntax</strong>: <code>FLOOR(number, significance)</code><br>
+<strong>Example</strong>: <code>=FLOOR(A1, 1)</code></p></li>
+<li><p><strong>ABS</strong>: Returns the absolute value of a number.<br>
+<strong>Syntax</strong>: <code>ABS(number)</code><br>
+<strong>Example</strong>: <code>=ABS(A1)</code></p></li>
+<li><p><strong>POWER</strong>: Returns the result of a number raised to a power.<br>
+<strong>Syntax</strong>: <code>POWER(number, power)</code><br>
+<strong>Example</strong>: <code>=POWER(A1, 2)</code></p></li>
+<li><p><strong>SQRT</strong>: Returns the square root of a number.<br>
+<strong>Syntax</strong>: <code>SQRT(number)</code><br>
+<strong>Example</strong>: <code>=SQRT(A1)</code></p></li>
+<li><p><strong>MOD</strong>: Returns the remainder from division.<br>
+<strong>Syntax</strong>: <code>MOD(number, divisor)</code><br>
+<strong>Example</strong>: <code>=MOD(A1, B1)</code></p></li>
+<li><p><strong>SUMIF</strong>: Adds the cells specified by a given condition or criteria.<br>
+<strong>Syntax</strong>: <code>SUMIF(range, criteria, [sum_range])</code><br>
+<strong>Example</strong>: <code>=SUMIF(A1:A10, "&gt;10")</code></p></li>
+<li><p><strong>COUNTIF</strong>: Counts the number of cells that meet a criterion.<br>
+<strong>Syntax</strong>: <code>COUNTIF(range, criteria)</code><br>
+<strong>Example</strong>: <code>=COUNTIF(A1:A10, "&gt;10")</code></p></li>
+<li><p><strong>AVERAGEIF</strong>: Calculates the average of cells that meet a criterion.<br>
+<strong>Syntax</strong>: <code>AVERAGEIF(range, criteria, [average_range])</code><br>
+<strong>Example</strong>: <code>=AVERAGEIF(A1:A10, "&gt;10")</code></p></li>
+<li><p><strong>AND</strong>: Returns TRUE if all of its arguments are TRUE.<br>
+<strong>Syntax</strong>: <code>AND(logical1, [logical2], ...)</code><br>
+<strong>Example</strong>: <code>=AND(A1&gt;10, B1&lt;5)</code></p></li>
+<li><p><strong>OR</strong>: Returns TRUE if any argument is TRUE.<br>
+<strong>Syntax</strong>: <code>OR(logical1, [logical2], ...)</code><br>
+<strong>Example</strong>: <code>=OR(A1&gt;10, B1&lt;5)</code></p></li>
+<li><p><strong>NOT</strong>: Reverses the logic of its argument.<br>
+<strong>Syntax</strong>: <code>NOT(logical)</code><br>
+<strong>Example</strong>: <code>=NOT(A1&gt;10)</code></p></li>
+<li><p><strong>ISNUMBER</strong>: Returns TRUE if the value is a number.<br>
+<strong>Syntax</strong>: <code>ISNUMBER(value)</code><br>
+<strong>Example</strong>: <code>=ISNUMBER(A1)</code></p></li>
+<li><p><strong>ISTEXT</strong>: Returns TRUE if the value is text.<br>
+<strong>Syntax</strong>: <code>ISTEXT(value)</code><br>
+<strong>Example</strong>: <code>=ISTEXT(A1)</code></p></li>
+<li><p><strong>ISBLANK</strong>: Returns TRUE if the cell is empty.<br>
+<strong>Syntax</strong>: <code>ISBLANK(value)</code><br>
+<strong>Example</strong>: <code>=ISBLANK(A1)</code></p></li>
+</ol>
 <blockquote class="blockquote">
-<p>Excel enables you to enter flexible formulas that use the values (or even text) in cells to calculate a result. When you enter a formula into a cell, the formula’s result appears in the cell. If you change any of the cells used by a formula, the formula recalculates and shows the new result.<span class="citation" data-cites="allen2017">(<a href="references.html#ref-allen2017" role="doc-biblioref">Allen and Feigl 2017</a>)</span></p>
+<p>Excel enables you to enter flexible formulas that use the values (or even text) in cells to calculate a result. When you enter a formula into a cell, the formula’s result appears in the cell. If you change any of the cells used by a formula, the formula recalculates and shows the new result<span class="citation" data-cites="allen2017">(<a href="references.html#ref-allen2017" role="doc-biblioref">Allen and Feigl 2017</a>)</span>.</p>
 </blockquote>
 <blockquote class="blockquote">
 <p>abs round count sum sumif vlookup xlookup index match if ifs textjoin concatenate sentence case trim left right mid len today now =“Today is”&amp;TEXT(TODAY(),“mmmm d, yyyy”) datedif extract year monmth day</p>
@@ -551,7 +724,6 @@ div.csl-indent {
 Allen, Luke N, and Andrea B Feigl. 2017. <span>“What’s in a Name? A Call to Reframe Non-Communicable Diseases.”</span> <em>The Lancet Global Health</em> 5 (2): e129–30. <a href="https://doi.org/10.1016/S2214-109X(17)30001-3">https://doi.org/10.1016/S2214-109X(17)30001-3</a>.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -980,13 +1152,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Excel Workshop 2024 Handbook was written by Razi N.</p>
+<p>Excel for Public Health Students</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
+<p>This book was written using <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
