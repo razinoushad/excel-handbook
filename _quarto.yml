@@ -6,9 +6,9 @@ book:
   author: "Razi N"
   page-footer:
     left:  |
-      Excel Workshop 2024 Handbook was written by Razi N.
+      Excel for Public Health Students
     right: |
-      This book was built with <a href="https://quarto.org/">Quarto</a>.
+      This book was written using <a href="https://quarto.org/">Quarto</a>.
   chapters:
     - index.qmd
     - intro.qmd
@@ -16,7 +16,6 @@ book:
     - visualizations.qmd
     - analysis.qmd
     - power_query.qmd
-    - summary.qmd
     - references.qmd
 
 bibliography: references.bib

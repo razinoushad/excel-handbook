@@ -6,7 +6,7 @@ Power Query enhances the experience pf extracting data from a wide variety of so
 
 ### Importing Data
 
-1.  **Accessing Power Query**: 
+1.  **Accessing Power Query**:
 
     -   To begin using Power Query, navigate to the "Data" tab on the ribbon. From there, select "Get Data". You'll find various options like files, databases, or online services. For this example, we'll import data from an Excel workbook.
 
@@ -61,11 +61,10 @@ Once you've imported your data into Power Query, you can perform several transfo
     -   You can also right-click on the column header and choose "Change Type" to convert the data type.
 
     ![](images/pq-type.png){width="409"}
-    
+
 The Applied Steps pane displays a sequential list of all the transformation steps that have been applied to your data. Each step represents a specific action or transformation applied to the dataset.
 
 ![](images/pq-step.png){width="461"}
-
 
 ### Applying Changes and Loading Data
 
@@ -87,7 +86,4 @@ After applying the necessary transformations:
 
 <br>
 
-
-
-
-> This part is yet to be completed
+> This chapter is currently under development, and additional content will be added shortly.

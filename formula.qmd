@@ -1,7 +1,5 @@
 # Formulas and Functions
 
-> This chapter is not complete or sorted. We are working on this currently.
-
 As said earlier, formulas are what makes spreadsheet a spreadsheet. You use formulas in your Excel worksheets to calculate results from the data stored in the worksheet. When data changes, the formulas calculate updated results with no extra effort on your part. <br> In this book, we will not be explaining each and every formula or function in detail. Instead, we try to equip you with the ability to understand a function and how to apply it by looking at the syntax and utilizing the built-in help feature in Microsoft Excel. There is little use committing every function to memory when assistance is readily accessible alongside each function. Also, Excel continually introduces newer, more efficient functions and understanding fundamental principles of functions is more important.
 
 ## Formula Basics
@@ -95,15 +93,15 @@ Here `PatientData[Days of Hospitalization]` refers to "Days of Hospitalization" 
 
 Sometimes when you enter a formula, Excel displays a value that begins with a hash mark (#). This is a signal that the formula is returning an error value. You have to correct the formula (or correct a cell that the formula references) to get rid of the error display.
 
-| Error Value | Explanation                                                                                                                                                                                                                                                                                                                               |
-|-------------------|-----------------------------------------------------|
-| #DIV/0!     | The formula is trying to divide by zero. Because Excel applies a value of 0 to empty cells, this error also occurs when the formula attempts to divide by a cell that is blank or has a value of 0.                                                                                                                                       |
-| #NAME?      | The formula uses a name that Excel doesn't recognize. This can happen if you delete a name that's used in the formula, if you misspell a name and then hit Enter, or if you have unmatched quotes when using text.                                                                                                                        |
-| #N/A        | The formula is referring (directly or indirectly) to a cell that uses the NA function to signal that data is not available. For instance, the following formula returns an #N/A error if the A1 is empty: =IF(A1="", NA(), A1) Some lookup functions (for example, VLOOKUP and MATCH) can also return #N/A when they do not find a match. |
-| #NULL!      | The formula uses an intersection of two ranges that don't intersect. (This concept is described later in the chapter.)                                                                                                                                                                                                                    |
-| #NUM!       | A problem with a value exists; for example, you specified a negative number as an argument where a positive number is required.                                                                                                                                                                                                           |
-| #REF!       | The formula refers to a cell that isn't valid. This can happen if the cell has been deleted from the worksheet.                                                                                                                                                                                                                           |
-| #VALUE!     | The formula includes an argument or operand of the wrong type. (An operand is a value or cell reference that a formula uses to calculate a result.                                                                                                                                                                                        |
+| Error Value | Explanation |
+|----------------------|--------------------------------------------------|
+| #DIV/0! | The formula is trying to divide by zero. Because Excel applies a value of 0 to empty cells, this error also occurs when the formula attempts to divide by a cell that is blank or has a value of 0. |
+| #NAME? | The formula uses a name that Excel doesn't recognize. This can happen if you delete a name that's used in the formula, if you misspell a name and then hit Enter, or if you have unmatched quotes when using text. |
+| #N/A | The formula is referring (directly or indirectly) to a cell that uses the NA function to signal that data is not available. For instance, the following formula returns an #N/A error if the A1 is empty: =IF(A1="", NA(), A1) Some lookup functions (for example, VLOOKUP and MATCH) can also return #N/A when they do not find a match. |
+| #NULL! | The formula uses an intersection of two ranges that don't intersect. (This concept is described later in the chapter.) |
+| #NUM! | A problem with a value exists; for example, you specified a negative number as an argument where a positive number is required. |
+| #REF! | The formula refers to a cell that isn't valid. This can happen if the cell has been deleted from the worksheet. |
+| #VALUE! | The formula includes an argument or operand of the wrong type. (An operand is a value or cell reference that a formula uses to calculate a result. |
 
 ## Formula for Common Mathematical Operations
 
@@ -214,6 +212,247 @@ Consider a scenario where we want to count the days with more than 100 cases in 
 =COUNTIFS(A2:A7, ">400", B2:B7, "Region A")
 ```
 
-> Excel enables you to enter flexible formulas that use the values (or even text) in cells to calculate a result. When you enter a formula into a cell, the formula's result appears in the cell. If you change any of the cells used by a formula, the formula recalculates and shows the new result.[@allen2017]
+### IF() Function
+
+The `IF` function evaluates whether a condition is met or not and returns one value if the condition is true and another value if the condition is false.
+
+The syntax of the `IF` function is:
+
+``` default
+=IF(logical_test, value_if_true, value_if_false)
+```
+
+-   `logical_test`: This is the condition that you want to evaluate. It can be a logical expression, a cell reference, or another function that returns a logical value (TRUE or FALSE).
+-   `value_if_true`: The value that is returned if `logical_test` evaluates to TRUE.
+-   `value_if_false`: The value that is returned if `logical_test` evaluates to FALSE.
+
+Suppose we have a dataset containing cholesterol levels, and we want to categorize individuals as having high cholesterol if their level is greater than 240 mg/dL. We can use the `IF` function to create a column that identifies whether each individual has high cholesterol or not.
+
+**Example:** Assume cholesterol levels are in column A and start at row 2. In cell B2, enter the formula:
+
+``` default
+=IF(A2 > 240, "High Cholesterol", "Normal Cholesterol")
+```
+
+This formula checks if the value in cell A2 (cholesterol level) is greater than 240. If true, it returns "High Cholesterol"; otherwise, it returns "Normal Cholesterol".
+
+### IFS() Function
+
+`IFS` function extends the capabilities of the `IF` function by allowing you to evaluate multiple conditions and return a value corresponding to the first TRUE condition.
+
+The syntax of the `IFS` function is:
+
+``` default
+=IFS(condition1, value_if_true1, [condition2, value_if_true2], ...)
+```
+
+-   `condition1`, `condition2`, etc.: These are the conditions that you want to evaluate.
+-   `value_if_true1`, `value_if_true2`, etc.: These are the values that are returned if the corresponding condition is true.
+
+Let's extend the previous example to categorize cholesterol levels into different ranges (Normal, Borderline High, High) using the `IFS` function.
+
+**Example:** Assume cholesterol levels are in column A and start at row 2. In cell C2, enter the formula:
+
+``` default
+=IFS(A2 > 240, "High Cholesterol", A2 > 200, "Borderline High Cholesterol", A2 > 0, "Normal Cholesterol")
+```
+
+This formula evaluates the cholesterol level in cell A2 against multiple conditions. It returns "High Cholesterol" if A2 \> 240, "Borderline High Cholesterol" if A2 \> 200 but not greater than 240, and "Normal Cholesterol" if A2 is less than or equal to 200.
+
+## Commonly Used Excel Functions Cheat Sheet
+
+1.  **SUM**: Adds up a range of cells.\
+    **Syntax**: `SUM(number1, [number2], ...)`\
+    **Example**: `=SUM(A1:A10)`
+
+2.  **COUNT**: Counts the number of cells in a range that contain numbers.\
+    **Syntax**: `COUNT(value1, [value2], ...)`\
+    **Example**: `=COUNT(A1:A10)`
+
+3.  **AVERAGE**: Calculates the average of a range of cells.\
+    **Syntax**: `AVERAGE(number1, [number2], ...)`\
+    **Example**: `=AVERAGE(A1:A10)`
+
+4.  **MIN**: Returns the smallest number in a range of cells.\
+    **Syntax**: `MIN(number1, [number2], ...)`\
+    **Example**: `=MIN(A1:A10)`
+
+5.  **MAX**: Returns the largest number in a range of cells.\
+    **Syntax**: `MAX(number1, [number2], ...)`\
+    **Example**: `=MAX(A1:A10)`
+
+6.  **IF**: Checks whether a condition is met, and returns one value if true, and another value if false.\
+    **Syntax**: `IF(logical_test, value_if_true, value_if_false)`\
+    **Example**: `=IF(A1>10, "Yes", "No")`
+
+7.  **TRIM**: Removes all spaces from text except for single spaces between words.\
+    **Syntax**: `TRIM(text)`\
+    **Example**: `=TRIM(A1)`
+
+8.  **LEN**: Returns the number of characters in a text string.\
+    **Syntax**: `LEN(text)`\
+    **Example**: `=LEN(A1)`
+
+9.  **VLOOKUP**: Looks for a value in the first column of a table and returns a value in the same row from a specified column.\
+    **Syntax**: `VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])`\
+    **Example**: `=VLOOKUP(A1, B1:C10, 2, FALSE)`
+
+10. **XLOOKUP**: Searches a range or an array, and returns an item corresponding to the first match it finds. If a match doesn't exist, then `XLOOKUP` can return the closest (approximate) match.\
+    **Syntax**: `XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])`\
+    **Example**: `=XLOOKUP(A1, B1:B10, C1:C10, "Not Found")`
+
+11. **INDEX**: Returns the value of a cell in a specified row and column.\
+    **Syntax**: `INDEX(array, row_num, [column_num])`\
+    **Example**: `=INDEX(A1:C10, 2, 3)`
+
+12. **MATCH**: Searches for a specified value in a range of cells, and returns the relative position of that item.\
+    **Syntax**: `MATCH(lookup_value, lookup_array, [match_type])`\
+    **Example**: `=MATCH(A1, B1:B10, 0)`
+
+13. **CONCATENATE**: Joins several text strings into one text string.\
+    **Syntax**: `CONCATENATE(text1, [text2], ...)`\
+    **Example**: `=CONCATENATE(A1, " ", B1)`
+
+14. **LEFT**: Returns the first character or characters in a text string, based on the number of characters specified.\
+    **Syntax**: `LEFT(text, [num_chars])`\
+    **Example**: `=LEFT(A1, 3)`
+
+15. **RIGHT**: Returns the last character or characters in a text string, based on the number of characters specified.\
+    **Syntax**: `RIGHT(text, [num_chars])`\
+    **Example**: `=RIGHT(A1, 3)`
+
+16. **MID**: Returns a specific number of characters from a text string, starting at the position you specify.\
+    **Syntax**: `MID(text, start_num, num_chars)`\
+    **Example**: `=MID(A1, 2, 3)`
+
+17. **UPPER**: Converts text to uppercase.\
+    **Syntax**: `UPPER(text)`\
+    **Example**: `=UPPER(A1)`
+
+18. **LOWER**: Converts text to lowercase.\
+    **Syntax**: `LOWER(text)`\
+    **Example**: `=LOWER(A1)`
+
+19. **PROPER**: Capitalizes the first letter of each word in a text string.\
+    **Syntax**: `PROPER(text)`\
+    **Example**: `=PROPER(A1)`
+
+20. **NOW**: Returns the current date and time.\
+    **Syntax**: `NOW()`\
+    **Example**: `=NOW()`
+
+21. **TODAY**: Returns the current date.\
+    **Syntax**: `TODAY()`\
+    **Example**: `=TODAY()`
+
+22. **DATE**: Returns the number that represents the date in Excel date-time code.\
+    **Syntax**: `DATE(year, month, day)`\
+    **Example**: `=DATE(2021, 12, 25)`
+
+23. **TIME**: Returns the number that represents the time in Excel date-time code.\
+    **Syntax**: `TIME(hour, minute, second)`\
+    **Example**: `=TIME(12, 0, 0)`
+
+24. **DAYS**: Returns the number of days between two dates.\
+    **Syntax**: `DAYS(end_date, start_date)`\
+    **Example**: `=DAYS(B1, A1)`
+
+25. **YEAR**: Returns the year of a date.\
+    **Syntax**: `YEAR(serial_number)`\
+    **Example**: `=YEAR(A1)`
+
+26. **MONTH**: Returns the month of a date.\
+    **Syntax**: `MONTH(serial_number)`\
+    **Example**: `=MONTH(A1)`
+
+27. **DAY**: Returns the day of a date.\
+    **Syntax**: `DAY(serial_number)`\
+    **Example**: `=DAY(A1)`
+
+28. **HOUR**: Returns the hour from a time value.\
+    **Syntax**: `HOUR(serial_number)`\
+    **Example**: `=HOUR(A1)`
+
+29. **MINUTE**: Returns the minute from a time value.\
+    **Syntax**: `MINUTE(serial_number)`\
+    **Example**: `=MINUTE(A1)`
+
+30. **SECOND**: Returns the second from a time value.\
+    **Syntax**: `SECOND(serial_number)`\
+    **Example**: `=SECOND(A1)`
+
+31. **ROUND**: Rounds a number to a specified number of digits.\
+    **Syntax**: `ROUND(number, num_digits)`\
+    **Example**: `=ROUND(A1, 2)`
+
+32. **ROUNDUP**: Rounds a number up, away from zero.\
+    **Syntax**: `ROUNDUP(number, num_digits)`\
+    **Example**: `=ROUNDUP(A1, 2)`
+
+33. **ROUNDDOWN**: Rounds a number down, toward zero.\
+    **Syntax**: `ROUNDDOWN(number, num_digits)`\
+    **Example**: `=ROUNDDOWN(A1, 2)`
+
+34. **CEILING**: Rounds a number up to the nearest multiple of significance.\
+    **Syntax**: `CEILING(number, significance)`\
+    **Example**: `=CEILING(A1, 1)`
+
+35. **FLOOR**: Rounds a number down to the nearest multiple of significance.\
+    **Syntax**: `FLOOR(number, significance)`\
+    **Example**: `=FLOOR(A1, 1)`
+
+36. **ABS**: Returns the absolute value of a number.\
+    **Syntax**: `ABS(number)`\
+    **Example**: `=ABS(A1)`
+
+37. **POWER**: Returns the result of a number raised to a power.\
+    **Syntax**: `POWER(number, power)`\
+    **Example**: `=POWER(A1, 2)`
+
+38. **SQRT**: Returns the square root of a number.\
+    **Syntax**: `SQRT(number)`\
+    **Example**: `=SQRT(A1)`
+
+39. **MOD**: Returns the remainder from division.\
+    **Syntax**: `MOD(number, divisor)`\
+    **Example**: `=MOD(A1, B1)`
+
+40. **SUMIF**: Adds the cells specified by a given condition or criteria.\
+    **Syntax**: `SUMIF(range, criteria, [sum_range])`\
+    **Example**: `=SUMIF(A1:A10, ">10")`
+
+41. **COUNTIF**: Counts the number of cells that meet a criterion.\
+    **Syntax**: `COUNTIF(range, criteria)`\
+    **Example**: `=COUNTIF(A1:A10, ">10")`
+
+42. **AVERAGEIF**: Calculates the average of cells that meet a criterion.\
+    **Syntax**: `AVERAGEIF(range, criteria, [average_range])`\
+    **Example**: `=AVERAGEIF(A1:A10, ">10")`
+
+43. **AND**: Returns TRUE if all of its arguments are TRUE.\
+    **Syntax**: `AND(logical1, [logical2], ...)`\
+    **Example**: `=AND(A1>10, B1<5)`
+
+44. **OR**: Returns TRUE if any argument is TRUE.\
+    **Syntax**: `OR(logical1, [logical2], ...)`\
+    **Example**: `=OR(A1>10, B1<5)`
+
+45. **NOT**: Reverses the logic of its argument.\
+    **Syntax**: `NOT(logical)`\
+    **Example**: `=NOT(A1>10)`
+
+46. **ISNUMBER**: Returns TRUE if the value is a number.\
+    **Syntax**: `ISNUMBER(value)`\
+    **Example**: `=ISNUMBER(A1)`
+
+47. **ISTEXT**: Returns TRUE if the value is text.\
+    **Syntax**: `ISTEXT(value)`\
+    **Example**: `=ISTEXT(A1)`
+
+48. **ISBLANK**: Returns TRUE if the cell is empty.\
+    **Syntax**: `ISBLANK(value)`\
+    **Example**: `=ISBLANK(A1)`
+
+> Excel enables you to enter flexible formulas that use the values (or even text) in cells to calculate a result. When you enter a formula into a cell, the formula's result appears in the cell. If you change any of the cells used by a formula, the formula recalculates and shows the new result[@allen2017].
 
 > abs round count sum sumif vlookup xlookup index match if ifs textjoin concatenate sentence case trim left right mid len today now ="Today is"&TEXT(TODAY(),"mmmm d, yyyy") datedif extract year monmth day

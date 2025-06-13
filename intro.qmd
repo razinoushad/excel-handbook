@@ -18,7 +18,10 @@
 -   Each worksheet contains individual cells
 -   There is an invisible layer on top of each worksheet which holds the charts, diagrams, pictures, etc
 
-![Useful elements in the excel screen](images/excel-screen.png){fig-align="center"}
+
+::: {.content-hidden}
+  ![Useful elements in the excel screen](images/excel-screen.png){fig-align="center"}  
+:::
 
 ## Data Types
 
@@ -99,18 +102,18 @@ When you paste the information, Excel overwrites any cells that is in the destin
 
 Some useful paste options are as follows:
 
-| Select                       | To Paste                                                                                               |
-|------------------------|------------------------------------------------|
-| Paste                        | All cell contents and formatting, including linked data                                                |
-| Formulas                     | Only the formulas                                                                                      |
-| Formulas & Number Formatting | Pastes formulas and number formatting only                                                             |
-| Keep Source Formatting       | All cell contents and formatting                                                                       |
-| Transpose                    | Reorients the content of copied cells when pasting. Data in rows is pasted into columns and vice versa |
-| Values                       | Pastes the results of formulas                                                                         |
-| Values & Number Formatting   | Pastes the results of formulas plus the number formatting                                              |
-| Values & Source Formatting   | Pastes the results of formulas plus all formatting                                                     |
-| Formatting                   | Pastes only the formatting of the source range                                                         |
-| Paste Link                   | Creates formulas in the destination range that refer to the cells in the copied range                  |
+| Select | To Paste |
+|--------------------|----------------------------------------------------|
+| Paste | All cell contents and formatting, including linked data |
+| Formulas | Only the formulas |
+| Formulas & Number Formatting | Pastes formulas and number formatting only |
+| Keep Source Formatting | All cell contents and formatting |
+| Transpose | Reorients the content of copied cells when pasting. Data in rows is pasted into columns and vice versa |
+| Values | Pastes the results of formulas |
+| Values & Number Formatting | Pastes the results of formulas plus the number formatting |
+| Values & Source Formatting | Pastes the results of formulas plus all formatting |
+| Formatting | Pastes only the formatting of the source range |
+| Paste Link | Creates formulas in the destination range that refer to the cells in the copied range |
 
 ## Named Ranges
 
@@ -123,6 +126,8 @@ To create a named range in Excel, follow these simple steps:
 1.  **Select the Cells**: Highlight the cell or range of cells you want to name.
 2.  **Name the Range**: Go to the "Formulas" tab on the ribbon, click on "Define Name," and enter your desired name for the range.
 3.  **Confirm**: Click "OK" to save the named range.
+
+![](images/named-range-define.png)
 
 ::: callout-tip
 ## Tip
@@ -148,11 +153,13 @@ Instead of referencing cell ranges directly in your formulas, you can name the r
     -   names: `=$A$2:$A$7`
     -   height: `=$B$2:$B$7`
 
-Now, to calculate the total sales, you can simply use the formula:
+Now, to calculate the average heights, you can simply use the formula:
 
 ``` default
 =AVERAGE(height)
 ```
+
+![](images/named-range-use.png)
 
 ## Tables {#sec-tables}
 

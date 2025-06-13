@@ -190,14 +190,17 @@ Data validation is a powerful feature that allows you to control what type of da
 
 ### Specifying Validation Criteria
 
-1.  **Selecting Cells for Validation:** 
+1.  **Selecting Cells for Validation:**
+
     -   Begin by selecting the cells where you want to apply data validation. You can select a single cell, a range of cells, or even an entire column.
 
 2.  **Accessing Data Validation:**
+
     -   Navigate to the **Data** tab on the ribbon.
     -   Click on **Data Validation** in the **Data Tools** group.
 
 3.  **Setting Validation Rules:**
+
     -   In the Data Validation dialog box, choose the type of validation you want under the **Settings** tab.
     -   For example, to allow only whole numbers between 1 and 100, select **Whole number** and specify the minimum and maximum values.
 
@@ -220,12 +223,15 @@ Excel offers several validation criteria options, including:
 Dropdown lists are particularly useful for ensuring data consistency and ease of use. Here's how to set up a dropdown list using data validation:
 
 1.  **Specify List Items:**
+
     -   Enter the items you want in the dropdown list in a separate column or range.
 
 2.  **Select Cells for Dropdown:**
+
     -   Choose the cells where you want the dropdown list to appear.
 
 3.  **Set Data Validation:**
+
     -   Access the Data Validation dialog box.
     -   Choose **List** under **Allow**.
     -   Specify the source of the list using the range selector or by typing the range directly (e.g., `=$E$3:$E$6`).
@@ -234,6 +240,7 @@ Dropdown lists are particularly useful for ensuring data consistency and ease of
     ![](images/validation-list.png){width="580"}
 
 4.  **Enable the Dropdown:**
+
     -   Now, the selected cells will display a dropdown arrow, allowing users to choose from the predefined list.
 
 ## Creating a Dependent List
@@ -246,70 +253,65 @@ The PivotTable feature is perhaps the most technologically sophisticated compone
 
 ### Creating Pivot Table
 
-1. **Prepare Your Data**
-   Ensure your dataset is organized with column headers and rows of data. Each column should have a clear heading, and there should be no blank rows or columns within the dataset.
+1.  **Prepare Your Data** Ensure your dataset is organized with column headers and rows of data. Each column should have a clear heading, and there should be no blank rows or columns within the dataset.
 
-2. **Select Your Data**
-   Click anywhere inside your dataset. Alternatively, you can manually select the range of cells that contain your data.
+2.  **Select Your Data** Click anywhere inside your dataset. Alternatively, you can manually select the range of cells that contain your data.
 
-3. **Insert PivotTable**
-   Navigate to the "Insert" tab on the ribbon at the top of Excel. Click on "PivotTable" in the "Tables" group. This will open the Create PivotTable dialog box.
+3.  **Insert PivotTable** Navigate to the "Insert" tab on the ribbon at the top of Excel. Click on "PivotTable" in the "Tables" group. This will open the Create PivotTable dialog box.
 
-4. **Select Your Data Range**
-   Ensure the correct range of data is selected in the "Table/Range" field of the Create PivotTable dialog box. Excel should automatically detect the range based on your selection in Step 2.
+4.  **Select Your Data Range** Ensure the correct range of data is selected in the "Table/Range" field of the Create PivotTable dialog box. Excel should automatically detect the range based on your selection in Step 2.
 
-5. **Choose Where to Place the PivotTable**
-   Select where you want your PivotTable to be placed. You can either choose to place it in a new worksheet or in an existing worksheet.
+5.  **Choose Where to Place the PivotTable** Select where you want your PivotTable to be placed. You can either choose to place it in a new worksheet or in an existing worksheet.
 
-6. **Click "OK"**
-   Once you've selected your data range and the destination for your PivotTable, click "OK". This will create a new PivotTable or insert one into the designated location.
+6.  **Click "OK"** Once you've selected your data range and the destination for your PivotTable, click "OK". This will create a new PivotTable or insert one into the designated location.
 
-   ![](images/pivot-table-insert.png)
+    ![](images/pivot-table-insert.png)
 
-7. **Design Your PivotTable**
-   - **Fields List:** A new pane will appear on the right, called "PivotTable Fields". This pane lists all the column headers from your dataset.
-   - **Drag Fields to Areas:** Drag the fields you want to analyze into the different areas of the PivotTable:
-     - **Values:** Drag the fields you want to perform calculations on (e.g., sums, averages) into this area.
-     - **Rows:** Drag fields here to use them as row labels in your PivotTable.
-     - **Columns:** Drag fields here to use them as column labels in your PivotTable.
-     - **Filters:** Drag fields here to use them as filters for your PivotTable.
-     
-   ![](images/pivot-table-result.png)   
-   
-8. **Customize Your PivotTable**
-   - **Apply Filters:** Use the dropdown arrows next to field names in the PivotTable to filter data.
-   - **Change Summarization:** Right-Click on any value in the PivotTable, choose "Value Field Settings" to change the calculation type (e.g., sum, count, average).
-   - **Format Your PivotTable:** Modify the PivotTable's design, style, and layout using options in the "PivotTable Analyze" tab that appears when the PivotTable is selected.
+7.  **Design Your PivotTable**
 
-9. **Refresh Your PivotTable (if needed)**
-    If your data changes, you can refresh your PivotTable to reflect the updated information. Simply right-click on the PivotTable and choose "Refresh".
+    -   **Fields List:** A new pane will appear on the right, called "PivotTable Fields". This pane lists all the column headers from your dataset.
+    -   **Drag Fields to Areas:** Drag the fields you want to analyze into the different areas of the PivotTable:
+        -   **Values:** Drag the fields you want to perform calculations on (e.g., sums, averages) into this area.
+        -   **Rows:** Drag fields here to use them as row labels in your PivotTable.
+        -   **Columns:** Drag fields here to use them as column labels in your PivotTable.
+        -   **Filters:** Drag fields here to use them as filters for your PivotTable.
+
+    ![](images/pivot-table-result.png)
+
+8.  **Customize Your PivotTable**
+
+    -   **Apply Filters:** Use the dropdown arrows next to field names in the PivotTable to filter data.
+    -   **Change Summarization:** Right-Click on any value in the PivotTable, choose "Value Field Settings" to change the calculation type (e.g., sum, count, average).
+    -   **Format Your PivotTable:** Modify the PivotTable's design, style, and layout using options in the "PivotTable Analyze" tab that appears when the PivotTable is selected.
+
+9.  **Refresh Your PivotTable (if needed)** If your data changes, you can refresh your PivotTable to reflect the updated information. Simply right-click on the PivotTable and choose "Refresh".
 
 ### Commands in the PivotTable Analyze Tab
 
 #### **Data** {.unnumbered}
 
-- **Refresh**: This command updates the pivot table with the latest data from the source range. It's useful when your underlying dataset has changed, and you want your pivot table to reflect those changes.
-- **Change Data Source**: Use this command to modify the source data range for your pivot table. If you've added more data to your dataset or want to change the range for any reason, this option is essential.
+-   **Refresh**: This command updates the pivot table with the latest data from the source range. It's useful when your underlying dataset has changed, and you want your pivot table to reflect those changes.
+-   **Change Data Source**: Use this command to modify the source data range for your pivot table. If you've added more data to your dataset or want to change the range for any reason, this option is essential.
 
 #### **Actions** {.unnumbered}
 
-- **Select**: Allows you to select specific elements within your pivot table, such as cells, columns, or rows, for further manipulation.
-- **Move PivotTable**: You can relocate your pivot table within the same workbook or to a different worksheet using this option.
-- **Clear**: Removes applied filters or customizations, or formatting from the pivot table.
+-   **Select**: Allows you to select specific elements within your pivot table, such as cells, columns, or rows, for further manipulation.
+-   **Move PivotTable**: You can relocate your pivot table within the same workbook or to a different worksheet using this option.
+-   **Clear**: Removes applied filters or customizations, or formatting from the pivot table.
 
 #### **Fields, Items & Sets** {.unnumbered}
 
-- **PivotTable Fields**: Opens or closes the PivotTable Fields pane, which lets you add, remove, or rearrange fields within your pivot table.
-- **Show/Hide**: Customize the display of various elements in your pivot table, such as subtotals, grand totals, and field headers.
+-   **PivotTable Fields**: Opens or closes the PivotTable Fields pane, which lets you add, remove, or rearrange fields within your pivot table.
+-   **Show/Hide**: Customize the display of various elements in your pivot table, such as subtotals, grand totals, and field headers.
 
 #### **Filter** {.unnumbered}
 
-- **Insert Slicer**: When you have multiple fields in your PivotTable, inserting a slicer allows you to create visual buttons that can filter data based on the selected criteria. 
-- **Insert Timeline**: It allows you to filter data by specific dates using an interactive timeline control.
+-   **Insert Slicer**: When you have multiple fields in your PivotTable, inserting a slicer allows you to create visual buttons that can filter data based on the selected criteria.
+-   **Insert Timeline**: It allows you to filter data by specific dates using an interactive timeline control.
 
 #### **Calculations** {.unnumbered}
 
-- **Fields, Items & Sets**: Create calculated fields, calculated items, or calculated sets to extend the functionality of your pivot table with custom calculations.
+-   **Fields, Items & Sets**: Create calculated fields, calculated items, or calculated sets to extend the functionality of your pivot table with custom calculations.
 
 The Pivot Table in itself can be written in one whole chapter. But here we are only giving you only the basics of the pivot table. You can learn more about pivot tables from other sources. Consider this section as an introduction to pivot tables and try mastering it since pivot table is one of the most amazing feature in Excel.
 

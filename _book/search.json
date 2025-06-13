@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Excel Workshop 2024",
+    "title": "Excel for Public Health Students",
     "section": "",
-    "text": "Preface\nThis book written in Quarto. The contents in the book are to make beginner level people understand excel software. For that we have oversimplified many functions and commands without going in depth so that people who are not familiar with excel doesn’t feel confused. There are many books and articles which explain the commands and functions in detail. You may refer them for getting an in depth understanding of the concepts and behind the scenes. This book is intended to use as an adjuant for the excel workshop conducted by us.",
+    "text": "Preface\nThe contents in the book are to make beginner level people understand excel software. For that we have oversimplified many functions and commands without going in depth so that people who are not familiar with excel doesn’t feel confused. There are many books and articles which explain the commands and functions in detail. You may refer them for getting an in depth understanding of the concepts and behind the scenes. This book is intended to use as a companinon for the excel workshop conducted by us.",
     "crumbs": [
       "Preface"
     ]
@@ -390,6 +390,16 @@
     ]
   },
   {
+    "objectID": "power_query.html#using-power-query-to-load-and-transform-data",
+    "href": "power_query.html#using-power-query-to-load-and-transform-data",
+    "title": "5  Power Query",
+    "section": "",
+    "text": "5.1.1 Importing Data\n\nAccessing Power Query:\n\nTo begin using Power Query, navigate to the “Data” tab on the ribbon. From there, select “Get Data”. You’ll find various options like files, databases, or online services. For this example, we’ll import data from an Excel workbook.\n\n\nImporting Data:\n\nClick on “From Excel Workbook” and browse to select the file containing your data. Click “Import”.\n\n\n\nThe Navigator pane will appear as shown in the figure. Choose the specific worksheet or named range that you want to import. When you click on each table, you can see a preview of the data.\nClick on “Transform Data”. It will open Power Query Editor window, where you can transform the data (clean, add more columns, filter unwanted data, etc) before loading into Excel. If you don’t wish to tranform the data or your data is already cleaned, then you can click on the “Load” button.\n\n\n\n\n\n5.1.2 Simple Data Transformation in Power Query\nOnce you’ve imported your data into Power Query, you can perform several transformations to clean and refine it form the Power Query Editor Window. Here, we are mentioning only a few of them.\n\nRemoving Unnecessary Columns:\n\nIn the Power Query Editor window, review the data in the “Queries” pane on the left.\nClick on a query to see its data preview in the main window.\nTo remove columns, select the column header(s), right-click, and choose “Remove” or “Remove Other Columns” to keep only the desired data.\n\n\nFiltering Rows:\n\nUse filters to exclude rows based on specific criteria.\nClick on the filter icon in the column header and define your filter conditions (e.g., only include rows where a certain column’s value is less than a particular number).\nYou can also filter to remove blank rows.\n\n\nAdding Custom Columns:\n\nSometimes you need to derive new information from existing data.\nClick on “Add Column” in the ribbon and choose “Custom Column.”\n\n\n\nWrite a formula to create a new calculated column based on your requirements.\n\n\nData Type and Format Adjustments:\n\nEnsure that each column is assigned the correct data type (e.g., text, number, date) to avoid issues during analysis.\nUse the “Transform” tab to adjust formats or convert data types.\nYou can also right-click on the column header and choose “Change Type” to convert the data type.\n\n\n\nThe Applied Steps pane displays a sequential list of all the transformation steps that have been applied to your data. Each step represents a specific action or transformation applied to the dataset.\n\n\n\n5.1.3 Applying Changes and Loading Data\nAfter applying the necessary transformations:\n\nPreview Changes:\n\nReview the updated data in the Power Query Editor to ensure it meets your needs.\n\nApplying Changes:\n\nClick on “Close & Load” to bring the cleaned data back into Excel.\n\n\n\n\n\n\n\nThis part is yet to be completed",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Power Query</span>"
+    ]
+  },
+  {
     "objectID": "summary.html",
     "href": "summary.html",
     "title": "6  Summary",
@@ -407,16 +417,6 @@
     "text": "Allen, Luke N, and Andrea B Feigl. 2017. “What’s in a Name? A Call\nto Reframe Non-Communicable Diseases.” The Lancet Global\nHealth 5 (2): e129–30. https://doi.org/10.1016/S2214-109X(17)30001-3.",
     "crumbs": [
       "References"
-    ]
-  },
-  {
-    "objectID": "power_query.html#using-power-query-to-load-and-transform-data",
-    "href": "power_query.html#using-power-query-to-load-and-transform-data",
-    "title": "5  Power Query",
-    "section": "",
-    "text": "5.1.1 Importing Data\n\nAccessing Power Query:\n\nTo begin using Power Query, navigate to the “Data” tab on the ribbon. From there, select “Get Data”. You’ll find various options like files, databases, or online services. For this example, we’ll import data from an Excel workbook.\n\n\nImporting Data:\n\nClick on “From Excel Workbook” and browse to select the file containing your data. Click “Import”.\n\n\n\nThe Navigator pane will appear as shown in the figure. Choose the specific worksheet or named range that you want to import. When you click on each table, you can see a preview of the data.\nClick on “Transform Data”. It will open Power Query Editor window, where you can transform the data (clean, add more columns, filter unwanted data, etc) before loading into Excel. If you don’t wish to tranform the data or your data is already cleaned, then you can click on the “Load” button.\n\n\n\n\n\n5.1.2 Simple Data Transformation in Power Query\nOnce you’ve imported your data into Power Query, you can perform several transformations to clean and refine it form the Power Query Editor Window. Here, we are mentioning only a few of them.\n\nRemoving Unnecessary Columns:\n\nIn the Power Query Editor window, review the data in the “Queries” pane on the left.\nClick on a query to see its data preview in the main window.\nTo remove columns, select the column header(s), right-click, and choose “Remove” or “Remove Other Columns” to keep only the desired data.\n\n\nFiltering Rows:\n\nUse filters to exclude rows based on specific criteria.\nClick on the filter icon in the column header and define your filter conditions (e.g., only include rows where a certain column’s value is less than a particular number).\nYou can also filter to remove blank rows.\n\n\nAdding Custom Columns:\n\nSometimes you need to derive new information from existing data.\nClick on “Add Column” in the ribbon and choose “Custom Column.”\n\n\n\nWrite a formula to create a new calculated column based on your requirements.\n\n\nData Type and Format Adjustments:\n\nEnsure that each column is assigned the correct data type (e.g., text, number, date) to avoid issues during analysis.\nUse the “Transform” tab to adjust formats or convert data types.\nYou can also right-click on the column header and choose “Change Type” to convert the data type.\n\n\n\nThe Applied Steps pane displays a sequential list of all the transformation steps that have been applied to your data. Each step represents a specific action or transformation applied to the dataset.\n\n\n\n5.1.3 Applying Changes and Loading Data\nAfter applying the necessary transformations:\n\nPreview Changes:\n\nReview the updated data in the Power Query Editor to ensure it meets your needs.\n\nApplying Changes:\n\nClick on “Close & Load” to bring the cleaned data back into Excel.\n\n\n\n\n\n\n\nThis part is yet to be completed",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Power Query</span>"
     ]
   }
 ]
